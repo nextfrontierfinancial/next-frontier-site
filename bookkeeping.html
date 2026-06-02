@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookkeeping Services | Next Frontier Financial Services</title>
+    <meta name="description" content="Pristine monthly bookkeeping and cash flow tracking built to give small business owners complete operational clarity.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Core Brand CSS Variables */
+        :root {
+            --charcoal: #232B2B;
+            --sage-dark: #4A5D4E;
+            --sage: #7A9A82;
+            --sage-light: #EBF0EC;
+            --sand-light: #F9F8F6;
+            --white: #FFFFFF;
+            --text-main: #2D312E;
+            --text-muted: #5A605B;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation Style */
+        header {
+            background-color: rgba(249, 248, 246, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 0; 
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 180px;
+            height: auto;
+            display: block;
+        }
+
+        .brand-main {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-left: 2rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--sage);
+        }
+
+        .nav-btn {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--sage-dark);
+            color: var(--white);
+        }
+
+        /* Hero Layout */
+        .page-hero {
+            background-color: var(--sand-light);
+            padding: 8rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(74, 93, 78, 0.05);
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .page-hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: 7rem 0;
+        }
+
+        /* Core Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Premium Pricing Section with Background Image */
+        .pricing-section {
+            position: relative;
+            /* Linear gradient creates a dark mask over the image for flawless text contrast */
+            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.90), rgba(42, 53, 46, 0.92)), 
+                              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .pricing-header span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        .pricing-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* Subscription Grid Layout */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background-color: rgba(255, 255, 255, 0.98);
+            color: var(--text-main);
+            border-radius: 6px;
+            padding: 3.5rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Accent for the featured model */
+        .pricing-card.featured {
+            border: 2px solid var(--sage);
+        }
+
+        .badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background-color: var(--sage-dark);
+            color: var(--white);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .tier-name {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .tier-price {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .tier-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 0.25rem;
+        }
+
+        .tier-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 3rem;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Elegant custom bullet markers */
+        .feature-list li::before {
+            content: "✓";
+            color: var(--sage-dark);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        .btn-tier {
+            display: block;
+            text-align: center;
+            background-color: var(--charcoal);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-tier:hover {
+            background-color: var(--sage-dark);
+        }
+
+        .pricing-card.featured .btn-tier {
+            background-color: var(--sage-dark);
+        }
+
+        .pricing-card.featured .btn-tier:hover {
+            background-color: var(--charcoal);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--sand-light);
+            padding: 4rem 0;
+            border-top: 1px solid rgba(74, 93, 78, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Mobile View Optimization */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 0;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 1rem;
+            }
+
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+
+            .pricing-section { 
+                background-attachment: scroll; 
+            }
+            
+            .pricing-grid { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .footer-wrapper { 
+                flex-direction: column; 
+                gap: 1rem; 
+                text-align: center; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-brand">
+                <img src="Untitled design (14).png" alt="Next Frontier Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-main">Next Frontier</span>
+                    <span class="brand-sub">Financial Services</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="bookkeeping.html" style="color: var(--sage);">Bookkeeping</a>
+                <a href="tax-services.html">Tax Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="nav-btn">Secure Your Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Pristine Bookkeeping Solutions</h1>
+            <p>We manage your day-to-day transactional health so you always know your exact margins, overhead scale, and ultimate cash capacity.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Clean Ledger Operations</h3>
+                    <p>Every single line item is sorted and cross-checked against your banking feeds with absolute tracking precision. No unassigned gaps, no guesswork left over at year-end.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Proactive Overhead Tracking</h3>
+                    <p>Understand exactly where your cash reserves flow each month. We deliver crisp balance sheets and cash overviews that outline stable paths for infrastructure scaling.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Smooth Tax Handoff</h3>
+                    <p>Because your business ledgers remain completely clean throughout the calendar year, transitioning into tax seasons is completely seamless—minimizing compliance liability automatically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding pricing-section">
+        <div class="container">
+            
+            <div class="pricing-header">
+                <span>Transparent Subscriptions</span>
+                <h2>Bookkeeping Structures Built for Growth</h2>
+            </div>
+
+            <div class="pricing-grid">
+                
+                <div class="pricing-card">
+                    <div>
+                        <h3 class="tier-name">Bronze</h3>
+                        <div class="tier-price">$450<span>/mo</span></div>
+                        <p class="tier-description">Ideal for single-operator business owners and growing LLCs looking for foundational financial clarity.</p>
+                        <ul class="feature-list">
+                            <li>Up to 2 linked bank/credit accounts</li>
+                            <li>Monthly transaction balancing</li>
+                            <li>Pristine profit & loss reporting</li>
+                            <li>Direct year-end tax prep alignment</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-tier">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <span class="badge">Most Popular</span>
+                    <div>
+                        <h3 class="tier-name">Silver</h3>
+                        <div class="tier-price">$750<span>/mo</span></div>
+                        <p class="tier-description">Designed for established companies managing scaling operational teams and overhead channels.</p>
+                        <ul class="feature-list">
+                            <li>Up to 4 linked transaction accounts</li>
+                            <li>Bi-weekly ledger balancing</li>
+                            <li>Quarterly strategy review call</li>
+                            <li>Basic receipt attachment integration</li>
+                            <li>Custom operational cash forecasting</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-tier">Select Silver Tier</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div>
+                        <h3 class="tier-name">Gold</h3>
+                        <div class="tier-price">$1,200<span>/mo</span></div>
+                        <p class="tier-description">Comprehensive financial backend oversight for complex systems requiring deep transactional care.</p>
+                        <ul class="feature-list">
+                            <li>Unlimited account feed connections</li>
+                            <li>Weekly ledger audits & tracking</li>
+                            <li>Monthly strategic oversight session</li>
+                            <li>Advanced class/location tracking</li>
+                            <li>Priority messaging support channel</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-tier">Select Gold Tier</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-wrapper">
+            <p>&copy; 2026 Next Frontier Financial Services. All rights reserved.</p>
+            <p>Meticulous Ledger Management & Strategic Tax Planning</p>
+        </div>
+    </footer>
+
+</body>
+</html>

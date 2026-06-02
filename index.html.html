@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Frontier Financial Services | Premium Bookkeeping & Tax Strategy</title>
+    <meta name="description" content="Meticulous bookkeeping and proactive tax execution designed for business owners seeking financial clarity and room to scale.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Next Frontier Financial Services | Bookkeeping & Tax Strategy">
+    <meta property="og:description" content="Bringing pristine clarity and intentional financial stability to your business journey.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Modern CSS Reset & Core Brand Variables */
+        :root {
+            --charcoal: #232B2B;
+            --sage-dark: #4A5D4E;
+            --sage: #7A9A82;
+            --sage-light: #EBF0EC;
+            --sand-light: #F9F8F6;
+            --white: #FFFFFF;
+            --text-main: #2D312E;
+            --text-muted: #5A605B;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth; /* Ensures seamless gliding down to the embed frame */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation Style */
+        header {
+            background-color: rgba(249, 248, 246, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 0; 
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            gap: 0;
+        }
+
+        .logo-img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 0px;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .brand-main {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-left: 2rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--sage);
+        }
+
+        .nav-btn {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--sage-dark);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--sand-light);
+            padding: 10rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(74, 93, 78, 0.05);
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            color: var(--charcoal);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--charcoal);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--sage-dark);
+        }
+
+        /* Section Global Settings */
+        .section-padding {
+            padding: 7rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage-dark);
+            font-weight: 600;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* Process Section with Mountain Background */
+        .process-section {
+            position: relative;
+            background-color: var(--charcoal);
+            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.55), rgba(42, 53, 46, 0.65)), 
+                              url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border-top: 1px solid rgba(74, 93, 78, 0.1);
+        }
+
+        .process-section .section-header span { color: var(--sage); }
+        .process-section .section-header h2 { color: var(--white); }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-card {
+            background-color: rgba(255, 255, 255, 0.98); 
+            padding: 3rem 2rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .process-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--sage-light);
+            color: var(--sage-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .process-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        /* About Section Styles */
+        .about-section {
+            background-color: var(--white);
+            border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image-container {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        /* Subtle frame behind portrait */
+        .about-image-container::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--sage);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Directional Focus Navigation Grid */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+        }
+
+        .focus-card {
+            background-color: var(--white);
+            border: 1px solid rgba(74, 93, 78, 0.15);
+            border-radius: 6px;
+            padding: 4rem 3rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .focus-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+            border-color: var(--sage);
+        }
+
+        .focus-card h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .focus-card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-focus {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--charcoal);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .btn-focus:hover {
+            background-color: var(--sage-dark);
+        }
+
+        /* Portability Showcase Section */
+        .portability-banner {
+            position: relative;
+            background-image: linear-gradient(to right, rgba(35, 43, 43, 0.95), rgba(35, 43, 43, 0.85)), 
+                              url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0;
+        }
+
+        .portability-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .portability-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .editorial-quote {
+            margin-top: 3rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+        }
+
+        .editorial-quote blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto 1rem auto;
+        }
+
+        .editorial-quote cite {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        /* Inline Cal.com Embed Environment */
+        .booking-section {
+            padding: 7rem 0;
+            background-color: var(--sand-light);
+            border-top: 1px solid rgba(74, 93, 78, 0.1);
+            border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+        }
+
+        .booking-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .booking-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .booking-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage-dark);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .booking-intro h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .booking-intro p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .scheduler-frame-wrapper {
+            background-color: var(--white);
+            border: 1px solid rgba(74, 93, 78, 0.15);
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(35, 43, 43, 0.04);
+            overflow: hidden;
+            height: 700px; 
+            width: 100%;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .scheduler-frame-wrapper:hover {
+            box-shadow: 0 15px 40px rgba(35, 43, 43, 0.08);
+        }
+
+        /* Engagement Banner */
+        .cta-banner {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cta-banner h2 {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: var(--sage);
+            color: var(--charcoal);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--sage-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--sand-light);
+            padding: 4rem 0;
+            border-top: 1px solid rgba(74, 93, 78, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-image-container { max-width: 500px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.2rem; }
+            .guarantee-container { padding: 2rem 1.5rem; margin-top: 3.5rem; }
+            .pricing-section { background-attachment: scroll; }
+
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+
+            .nav-links {
+                display: flex !important; 
+                justify-content: center;
+                width: 100%;
+                margin: 0;
+            }
+
+            nav a {
+                margin: 0 0.75rem; 
+                font-size: 0.9rem;
+            }
+
+            .nav-btn {
+                display: none; 
+            }
+
+            .scheduler-frame-wrapper {
+                height: 750px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-brand">
+                <img src="Untitled design (14).png" alt="Next Frontier Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-main">Next Frontier</span>
+                    <span class="brand-sub">Financial Services</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="bookkeeping.html">Bookkeeping</a>
+                <a href="tax-services.html">Tax Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="#onboarding-frontier" class="nav-btn">Secure Your Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Financial Mastery for Your Business Frontier</h1>
+            <p>Pristine bookkeeping and intentional tax execution designed to clear your path, protect your cash flow, and give you the space to build.</p>
+            <a href="#focus-selection" class="btn-primary">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section class="section-padding process-section">
+        <div class="container">
+            <div class="section-header">
+                <span>The Client Experience</span>
+                <h2>A Seamless Way to Oversee Your Wealth</h2>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">1</div>
+                    <h3>Elegant Integration</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">We safely link your transaction streams directly into a clean bookkeeping ecosystem. No tedious paperwork uploads, no friction.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">2</div>
+                    <h3>Meticulous Oversight</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Every transaction is expertly categorized, balanced, and verified each month. You receive accurate financial tracking that you can actually use.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">3</div>
+                    <h3>Strategic Execution</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">We map out your year-end tax liabilities long before deadlines arrive, adjusting your positioning to maximize returns and lower stress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding about-section">
+        <div class="container">
+            <div class="about-grid">
+                
+                <div class="about-image-container">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Next Frontier Financial Services Corporate Workspace" class="about-image">
+                </div>
+
+                <div class="about-content">
+                    <span>Behind The Firm</span>
+                    <h3>Grounded Expertise, Built For Small Business</h3>
+                    <p>At Next Frontier Financial Services, we believe that true business growth requires absolute financial clarity. We don't just categorize expenses or plug numbers into basic software. We build clean, reliable internal financial models that give you complete oversight of your operational overhead.</p>
+                    <p>Our approach mixes meticulous attention to detail with proactive tax execution. We work hard to eliminate the friction and late-night stress that usually comes with bookkeeping and accounting. By acting as a steady, focused backend team, we help keep your finances predictable so you can comfortably scale your operations.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="focus-selection" class="section-padding" style="background-color: var(--sand-light); border-top: 1px solid rgba(74, 93, 78, 0.1);">
+        <div class="container">
+            
+            <div class="section-header">
+                <span>Select Your Focus</span>
+                <h2>Tailored Financial Management</h2>
+            </div>
+
+            <div class="focus-grid">
+                
+                <div class="focus-card">
+                    <div>
+                        <h3>Bookkeeping Services</h3>
+                        <p>Keep your fingers on the pulse of your operational cash flow. Our monthly bookkeeping solutions offer clean ledgers, comprehensive financial balancing, and organized balance sheets tailored to sole proprietors, LLCs, and established corporations.</p>
+                    </div>
+                    <a href="bookkeeping.html" class="btn-focus">Explore Bookkeeping Services</a>
+                </div>
+
+                <div class="focus-card">
+                    <div>
+                        <h3>Tax Strategy & Compliance</h3>
+                        <p>Protect your hard-earned revenue with proactive compliance checking. From individual Form 1040 optimization to complex corporate S-Corp and C-Corp tax filings, we handle your structural execution smoothly and transparently.</p>
+                    </div>
+                    <a href="tax-services.html" class="btn-focus">Explore Tax Strategy</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="portability-banner">
+        <div class="container portability-content">
+            <h2>Your Data, Always Yours</h2>
+            <p style="color: rgba(255,255,255,0.85); max-width: 650px; margin: 0 auto; font-size: 1.05rem;">
+                Unlike mass-market financial platforms that lock your transaction records inside rigid, closed networks, we host your balance sheets within universally open financial ecosystems. If your business evolves or expands, your entire history moves cleanly alongside you—no complications, no data lock-in.
+            </p>
+
+            <div class="editorial-quote">
+                <blockquote>
+                    "I don't believe in trapping my clients with proprietary software locks. We build your bookkeeping structure inside premium, industry-standard ecosystems that you own. My goal is to earn your business every month through excellent service, not by holding your data hostage."
+                </blockquote>
+                <cite>— Katrina Longan, Founder</cite>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            
+            <div class="section-header">
+                <span>Resources & Strategy</span>
+                <h2>Latest From The Frontier</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+                
+                <article style="display: flex; flex-direction: column; text-align: left;">
+                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sage-dark); font-weight: 600; margin-bottom: 0.5rem;">Tax Strategy</div>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.3;">
+                        <a href="posts/maximizing-entity-deductions.html" style="color: var(--charcoal); text-decoration: none; transition: color 0.2s ease;">Maximizing Your Business Entity Deductions Safely</a>
+                    </h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; flex-grow: 1;">Discover the direct ways business owners can organize overhead costs right now to protect their cash and reduce year-end liabilities...</p>
+                    <a href="posts/maximizing-entity-deductions.html" style="font-size: 0.9rem; font-weight: 600; color: var(--charcoal); text-decoration: none;">Read Strategy →</a>
+                </article>
+
+                <article style="display: flex; flex-direction: column; text-align: left;">
+                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sage-dark); font-weight: 600; margin-bottom: 0.5rem;">Cash Management</div>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.3;">
+                        <a href="posts/demystifying-cash-flow.html" style="color: var(--charcoal); text-decoration: none; transition: color 0.2s ease;">Demystifying Your Cash Flow: Beyond the Spreadsheets</a>
+                    </h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; flex-grow: 1;">Unclear numbers create silent business bottlenecks. Learn how clean monthly bookkeeping uncovers practical opportunities for steady growth...</p>
+                    <a href="posts/demystifying-cash-flow.html" style="font-size: 0.9rem; font-weight: 600; color: var(--charcoal); text-decoration: none;">Read Strategy →</a>
+                </article>
+
+                <article style="display: flex; flex-direction: column; text-align: left;">
+                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sage-dark); font-weight: 600; margin-bottom: 0.5rem;">Entity Choice</div>
+                    <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.3;">
+                        <a href="posts/is-scorp-right-for-you.html" style="color: var(--charcoal); text-decoration: none; transition: color 0.2s ease;">Is an S-Corp Choice Right For Your Growing Firm?</a>
+                    </h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; flex-grow: 1;">We unpack the simple financial benchmarks, real salary expectations, and tax changes that show when your business is ready to convert...</p>
+                    <a href="posts/is-scorp-right-for-you.html" style="font-size: 0.9rem; font-weight: 600; color: var(--charcoal); text-decoration: none;">Read Strategy →</a>
+                </article>
+
+            </div>
+
+            <div style="text-align: center;">
+                <a href="blog.html" style="display: inline-block; background-color: var(--charcoal); color: var(--white); text-decoration: none; padding: 0.8rem 2rem; font-weight: 500; border-radius: 4px; font-size: 0.95rem; transition: background-color 0.2s ease;">Explore All Insights</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- START: LIVE ONBOARDING SCHEDULER SECTION -->
+    <section id="onboarding-frontier" class="booking-section">
+        <div class="booking-container">
+            
+            <div class="booking-intro">
+                <span class="booking-tag">Secure Your Window</span>
+                <h2>Schedule Your Strategy Session</h2>
+                <p>Pick a time below to map out your numbers. No stress, no judgment—just absolute clarity on your next financial frontier.</p>
+            </div>
+
+            <div class="scheduler-frame-wrapper">
+                <!-- Live Cal.com Event Embed Stream -->
+                <iframe 
+                    src="https://cal.com/next-frontier-financial-1kowee/30min?embed=true" 
+                    style="width: 100%; height: 100%; border: none;" 
+                    scrolling="no"
+                    title="Secure Intake Scheduler Interface">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+    <!-- END: LIVE ONBOARDING SCHEDULER SECTION -->
+
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to experience absolute financial clarity?</h2>
+            <a href="#onboarding-frontier" class="btn-secondary">Request an Initial Consultation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-wrapper">
+            <p>&copy; 2026 Next Frontier Financial Services. All rights reserved.</p>
+            <p>Meticulous Ledger Management & Strategic Tax Planning</p>
+        </div>
+    </footer>
+
+</body>
+</html>

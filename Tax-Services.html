@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Frameworks & Preparation | Next Frontier Financial Services</title>
+    <meta name="description" content="Proactive tax planning strategies and filing execution to protect your business assets and mitigate liabilities safely.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tax Services | Next Frontier Financial Services">
+    <meta property="og:description" content="Proactive strategies built to save you capital and align smoothly with modern codes.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Modern CSS Reset & Core Variables */
+        :root {
+            --charcoal: #232B2B;
+            --sage-dark: #4A5D4E;
+            --sage: #7A9A82;
+            --sage-light: #EBF0EC;
+            --sand-light: #F9F8F6;
+            --white: #FFFFFF;
+            --text-main: #2D312E;
+            --text-muted: #5A605B;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-main);
+            background-color: var(--sand-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation Style Consistency */
+        header {
+            background-color: var(--sand-light);
+            padding: 0.5rem 0; 
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            gap: 0;
+        }
+
+        .logo-img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 0px;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .brand-main {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-left: 2rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--sage);
+        }
+
+        .nav-btn {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--sage-dark);
+            color: var(--white);
+        }
+
+        /* Hero Layout */
+        .page-hero {
+            padding: 4rem 0 2rem 0;
+            text-align: center;
+            background-color: var(--sand-light);
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Core Framework Section */
+        .content-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+        }
+
+        /* Tax Models Pricing Section with Full Section Image Background */
+        .pricing-section {
+            padding: 6rem 0;
+            position: relative;
+            z-index: 1;
+            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        .pricing-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(35, 43, 43, 0.45);
+            z-index: -1;
+        }
+
+        .pricing-section h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3.5rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background-color: rgba(255, 255, 255, 0.97);
+            padding: 3.5rem 2.5rem;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 15px 35px rgba(35, 43, 43, 0.2);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(35, 43, 43, 0.3);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--sage);
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--sage);
+            color: var(--white);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .pricing-card .tier-name {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .tier-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card .tier-price span {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .pricing-card .tier-features li {
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-card .tier-features li::before {
+            content: "✓";
+            color: var(--sage);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .pricing-btn {
+            display: block;
+            text-align: center;
+            background-color: transparent;
+            color: var(--charcoal);
+            border: 1px solid var(--charcoal);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .pricing-btn:hover {
+            background-color: var(--charcoal);
+            color: var(--white);
+        }
+
+        .pricing-card.featured .pricing-btn {
+            background-color: var(--sage);
+            border-color: var(--sage);
+            color: var(--white);
+        }
+
+        .pricing-card.featured .pricing-btn:hover {
+            background-color: var(--charcoal);
+            border-color: var(--charcoal);
+        }
+
+        /* Process Section: Upgraded to Deep Dark Sage Background for Sophisticated Contrast */
+        .process-section {
+            padding: 6rem 0;
+            background-color: var(--sage-dark);
+        }
+
+        .process-section h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            background-color: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(35, 43, 43, 0.15);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-num {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Guarantee Box */
+        .guarantee-container {
+            margin-top: 5rem;
+            padding: 3rem;
+            background-color: var(--sand-light);
+            border-radius: 6px;
+            border-left: 4px solid var(--charcoal);
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(35, 43, 43, 0.05);
+        }
+
+        .guarantee-container h3 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background-color: var(--charcoal);
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: var(--sage);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--sage-light);
+            color: var(--charcoal);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--sand-light);
+            padding: 4rem 0;
+            border-top: 1px solid rgba(74, 93, 78, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Responsive Breakpoints & Mobile Navigation Fix */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 0;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 1rem;
+            }
+
+            .nav-btn {
+                width: 100%;
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+
+            .page-hero h1 { font-size: 2.2rem; }
+            .guarantee-container { padding: 2rem 1.5rem; margin-top: 3.5rem; }
+            .pricing-section { background-attachment: scroll; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Unified Header Navigation -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo-brand">
+                <img src="Untitled design (14).png" alt="Next Frontier Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-main">Next Frontier</span>
+                    <span class="brand-sub">Financial Services</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="bookkeeping.html">Bookkeeping</a>
+                <a href="tax-services.html" style="color: var(--sage);">Tax Services</a>
+                <a href="index.html#contact" class="nav-btn">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Body Content -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Strategic Tax Solutions</h1>
+            <p>Proactive mapping frameworks designed to safeguard assets and effortlessly maximize entity deductions.</p>
+        </div>
+    </section>
+
+    <!-- Core Process Features -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Strategic Tax Optimization</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Corporate & Individual Preparation</h3>
+                    <p>Filing structures optimized for modern firms and business owners. Complete protection against missing structural advantages.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Year-Round Planning</h3>
+                    <p>We don't just file in April. We consult throughout the annual roadmap, keeping you updated on critical regulatory shifts.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Entity Structuring</h3>
+                    <p>Get data-driven insight on whether your current entity structure is costing you cash flow or protecting your growth goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Models & Price Points Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Preparation Frameworks</h2>
+            <p class="pricing-subtitle">Transparent execution structures built around your regulatory filing profile.</p>
+            
+            <div class="pricing-grid">
+                <!-- Personal 1040 -->
+                <div class="pricing-card">
+                    <h3 class="tier-name">Personal Return</h3>
+                    <div class="tier-price"><span>Starts at</span> $450</div>
+                    <ul class="tier-features">
+                        <li>Comprehensive Form 1040 Preparation</li>
+                        <li>W-2 & 1099 Integration Schedules</li>
+                        <li>Itemized Deductions Optimization</li>
+                        <li>Electronic Filing & Direct Deposit Setup</li>
+                    </ul>
+                    <a href="index.html#contact" class="pricing-btn">File Personal Return</a>
+                </div>
+
+                <!-- S-Corp (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="badge">Business Choice</div>
+                    <h3 class="tier-name">S-Corporation</h3>
+                    <div class="tier-price"><span>Starts at</span> $800</div>
+                    <ul class="tier-features">
+                        <li>Form 1120-S Corporate Processing</li>
+                        <li>K-1 Distribution Schedule Generation</li>
+                        <li>Shareholder Compensation Alignment</li>
+                        <li>State & Federal Nexus Compliance</li>
+                    </ul>
+                    <a href="index.html#contact" class="pricing-btn">File S-Corp Return</a>
+                </div>
+
+                <!-- Corporate -->
+                <div class="pricing-card">
+                    <h3 class="tier-name">Corporate</h3>
+                    <div class="tier-price"><span>Starts at</span> $1,450</div>
+                    <ul class="tier-features">
+                        <li>Form 1120 Complex C-Corp Filing</li>
+                        <li>Multi-state Revenue Apportionment</li>
+                        <li>Detailed Capital Balance Sheet Match</li>
+                        <li>Quarterly Estimated Liability Blueprint</li>
+                    </ul>
+                    <a href="index.html#contact" class="pricing-btn">File Corporate Return</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Filing Process Section with Deep Sage Background -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Filing Process</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h3>Secure Digital Intake</h3>
+                    <p>Upload your tax documents, past filings, and business ledgers effortlessly into our fully encrypted digital vault.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h3>Strategic Analysis</h3>
+                    <p>We review your accounts to isolate missing write-offs, resolve structural leaks, and check compliance parameters.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h3>Review & Sign</h3>
+                    <p>We walk through your draft together so you understand every deduction baseline before signing off securely.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">04</div>
+                    <h3>Direct Transmission</h3>
+                    <p>Your return is securely transmitted straight to state and federal agencies with immediate confirmation logging.</p>
+                </div>
+            </div>
+
+            <!-- Customer Satisfaction Guarantee Callout Box -->
+            <div class="guarantee-container">
+                <h3>Our Customer Satisfaction Guarantee</h3>
+                <p>Accuracy, responsiveness, and total peace of mind are the core foundations of Next Frontier Financial Services. We guarantee your returns are meticulously processed following the most up-to-date tax provisions and codes. If you ever have a question or need an adjustment to your strategy, we promise prompt, dedicated support to resolve it. We stand completely behind the structural accuracy of every single document we file for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Engagement -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to plan your next tax frontier?</h2>
+            <a href="mailto:info@nextfrontierfinancialservices.com" class="btn-secondary">Protect Your Revenue</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-wrapper">
+            <p>&copy; 2026 Next Frontier Financial Services. All rights reserved.</p>
+            <p>Optimized Asset Management & Strategic Tax Planning</p>
+        </div>
+    </footer>
+
+</body>
+</html>
