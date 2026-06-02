@@ -1,0 +1,4 @@
+Ini, TOML
+[build]
+  command = "npx @11ty/eleventy"
+  publish = "public"
