@@ -139,7 +139,13 @@
   <main>
     <article>
       <h1>{{ title }}</h1>
-      <div class="meta-data">Published on {{ date.toDateString() }} by Katrina Longan</div>
+      <div class="meta-data">
+        {% if date %}
+          Published by Katrina Longan
+        {% else %}
+          Business Insights Hub
+        {% endif %}
+      </div>
       
       <div class="blog-content">
         {{ content | safe }}
