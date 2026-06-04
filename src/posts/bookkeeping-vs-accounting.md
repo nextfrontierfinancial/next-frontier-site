@@ -24,7 +24,7 @@ Bookkeeping is entirely administrative and transactional. Your bookkeeper focuse
 
 Without a bookkeeper, your financial records quickly turn into chaos. They make sure the raw data is completely accurate.
 
-![A concept graphic illustrating financial organization and data analysis paths](/images/financialstrategy.png)
+![A concept graphic illustrating financial organization and data analysis paths](/images/Financialstrategy.png)
 
 ### Accounting: Navigating the Strategic Big Picture
 
