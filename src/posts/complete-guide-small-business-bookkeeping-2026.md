@@ -25,7 +25,7 @@ When you pay for a personal grocery run with your business debit card—or buy o
 
 When tax season arrives, having a clean, dedicated bank feed means your financial professional can maximize your deductions without digging through personal receipts.
 
-![A workspace showcasing financial planning tools and business credit cards](/images/separate-business-accounts.jpg)
+![A workspace showcasing financial planning tools and business credit cards](/images/creditcards.png)
 
 ---
 
@@ -73,7 +73,7 @@ If you run operations or manage your firm from a dedicated space in your residen
 #### 3. Ignoring Your Books Until December
 Waiting until the end of the year to look at your financial data means you miss out on proactive tax strategies that have to be executed *before* the ball drops on New Year's Eve.
 
-![A smiling small business owner checking clear financials on a tablet device](/images/organized-business-owner.jpg)
+![A smiling small business owner checking clear financials on a tablet device](/images/2026GuidetoBookkeeping.png)
 
 ---
 
