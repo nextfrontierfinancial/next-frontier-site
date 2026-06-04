@@ -18,7 +18,7 @@ Neglecting your books isn’t just an organization problem. It’s a growth prob
 
 When you don’t have a clear handle on your daily cash flow, you are flying completely blind. You might feel like you’re making money because the bank account has commas in it, but without clean books, you don’t actually know your profit margins.
 
-![An entrepreneur analyzing business metrics on a clean dashboard layout](/images/business-growth-metrics.jpg)
+![An entrepreneur analyzing business metrics on a clean dashboard layout](/images/bookkeeping.png)
 
 ### Driving Without a Dashboard
 
