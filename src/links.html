@@ -1,1 +1,159 @@
+---
+layout: funnel-layout.html
+title: "Next Frontier Financial | Strategic Links"
+description: "Proactive tax strategy, wealth preservation, and cash flow optimization tools for established service business owners."
+---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Frontier Financial | Links</title>
+    <style>
+        :root {
+            --dark-sage: #4A5D4E;
+            --sage-accent: #7A9A82;
+            --light-cream: #F9F8F6;
+            --charcoal: #232B2B;
+        }
+
+        body {
+            background-color: var(--light-cream);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--charcoal);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .profile-section {
+            margin-bottom: 32px;
+        }
+
+        .profile-logo {
+            width: 90px;
+            height: 90px;
+            background-color: var(--dark-sage);
+            color: #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(74, 93, 78, 0.15);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .profile-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: var(--charcoal);
+            letter-spacing: -0.5px;
+        }
+
+        .profile-bio {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555555;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-button {
+            display: block;
+            background-color: #ffffff;
+            color: var(--charcoal);
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(74, 93, 78, 0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* High-priority dynamic highlight for your new main funnel */
+        .link-button.featured {
+            background-color: var(--dark-sage);
+            color: #ffffff;
+            border-color: var(--dark-sage);
+            box-shadow: 0 4px 12px rgba(74, 93, 78, 0.2);
+        }
+
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+            border-color: var(--sage-accent);
+        }
+
+        .link-button.featured:hover {
+            background-color: var(--sage-accent);
+            border-color: var(--sage-accent);
+            color: #ffffff;
+        }
+
+        .footer-credit {
+            margin-top: 48px;
+            font-size: 11px;
+            color: #999999;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="links-container">
+        
+        <div class="profile-section">
+            <div class="profile-logo">NF</div>
+            <h1 class="profile-name">Next Frontier Financial</h1>
+            <p class="profile-bio">Proactive Tax Strategy & Wealth Preservation for Established Service Business Owners.</p>
+        </div>
+
+        <div class="links-wrapper">
+            
+            <a href="/funnel/tax-matrix/" class="link-button featured">
+                📊 Free Business Tax & Cash Flow Diagnostic
+            </a>
+
+            <a href="/" class="link-button">
+                🌐 Visit Our Main Website
+            </a>
+
+            <a href="#" class="link-button">
+                📅 Schedule a Strategy Consultation
+            </a>
+
+        </div>
+
+        <div class="footer-credit">
+            © Next Frontier Financial Services
+        </div>
+
+    </div>
+
+</body>
+</html>
