@@ -5,7 +5,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Pass through your image folders straight to the finished site
-  eleventyConfig.addPassthroughCopy("src/images");
+eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("src/css");
 
   return {
