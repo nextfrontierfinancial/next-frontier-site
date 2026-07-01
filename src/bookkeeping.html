@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookkeeping Services | Next Frontier Financial Services</title>
-    <meta name="description" content="Pristine monthly bookkeeping and cash flow tracking built to give small business owners complete operational clarity.">
+    <meta name="description" content="Stop wondering whether your books are accurate. We keep your finances organized, your reports up to date, and your business ready for tax season—all year long.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,23 +77,6 @@
             display: block;
         }
 
-        .brand-main {
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--charcoal);
-            line-height: 1.1;
-        }
-
-        .brand-sub {
-            font-family: var(--font-sans);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
         nav a {
             text-decoration: none;
             color: var(--text-main);
@@ -112,12 +95,33 @@
             color: var(--white);
             padding: 0.6rem 1.2rem;
             border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
             transition: background-color 0.2s ease;
         }
 
         .nav-btn:hover {
             background-color: var(--sage-dark);
             color: var(--white);
+        }
+
+        /* Primary CTA Button Component */
+        .cta-btn-primary {
+            display: inline-block;
+            background-color: var(--charcoal);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            margin-top: 1.5rem;
+        }
+
+        .cta-btn-primary:hover {
+            background-color: var(--sage-dark);
+            transform: translateY(-1px);
         }
 
         /* Hero Layout */
@@ -130,32 +134,92 @@
 
         .page-hero h1 {
             font-family: var(--font-serif);
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--charcoal);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-weight: 400;
+            line-height: 1.2;
         }
 
         .page-hero p {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 750px;
+            margin: 0 auto 1.5rem auto;
         }
 
         .section-padding {
             padding: 7rem 0;
         }
 
-        /* Core Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 2rem;
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        .feature-card h3 {
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Section Background Alternation */
+        .bg-light {
+            background-color: var(--sand-light);
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .problem-card {
+            background-color: var(--sand-light);
+            padding: 2.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--sage);
+        }
+
+        .problem-card p {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .problem-footer {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-top: 3rem;
+        }
+
+        /* What We Do Grid */
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .outcome-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid rgba(74, 93, 78, 0.08);
+        }
+
+        .outcome-card h3 {
             font-family: var(--font-serif);
             font-size: 1.5rem;
             color: var(--charcoal);
@@ -163,167 +227,182 @@
             font-weight: 400;
         }
 
-        .feature-card p {
+        .outcome-card p {
             color: var(--text-muted);
             font-size: 1rem;
         }
 
-        /* Premium Pricing Section with Background Image */
-        .pricing-section {
+        /* The Process Layout */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
             position: relative;
-            /* Linear gradient creates a dark mask over the image for flawless text contrast */
-            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.90), rgba(42, 53, 46, 0.92)), 
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            padding: 1rem;
+        }
+
+        .step-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--sage);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* What's Included Checkmark List */
+        .checklist-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .checkmark-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .checklist-item svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--sage-dark);
+            stroke-width: 3;
+            fill: none;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Why Next Frontier (Differentiators) */
+        .differentiator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .diff-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .diff-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* FAQ Accordion Styling */
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(74, 93, 78, 0.15);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            cursor: pointer;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--sage);
+            font-weight: 400;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Conversion Footer CTA Section */
+        .cta-bottom-section {
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.92), rgba(42, 53, 46, 0.94)), 
                               url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: var(--white);
-        }
-
-        .pricing-header {
             text-align: center;
-            margin-bottom: 5rem;
+            padding: 8rem 0;
         }
 
-        .pricing-header span {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--sage);
-            font-weight: 600;
-        }
-
-        .pricing-header h2 {
+        .cta-bottom-section h2 {
             font-family: var(--font-serif);
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--white);
-            margin-top: 0.5rem;
             font-weight: 400;
-        }
-
-        /* Subscription Grid Layout */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            align-items: stretch;
-        }
-
-        .pricing-card {
-            background-color: rgba(255, 255, 255, 0.98);
-            color: var(--text-main);
-            border-radius: 6px;
-            padding: 3.5rem 2.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Accent for the featured model */
-        .pricing-card.featured {
-            border: 2px solid var(--sage);
-        }
-
-        .badge {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background-color: var(--sage-dark);
-            color: var(--white);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-
-        .tier-name {
-            font-family: var(--font-serif);
-            font-size: 1.75rem;
-            color: var(--charcoal);
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
-
-        .tier-price {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: baseline;
-        }
-
-        .tier-price span {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            margin-left: 0.25rem;
-        }
-
-        .tier-description {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-bottom: 3rem;
-            flex-grow: 1;
-        }
-
-        .feature-list li {
-            font-size: 0.95rem;
-            color: var(--text-main);
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
         }
 
-        /* Elegant custom bullet markers */
-        .feature-list li::before {
-            content: "✓";
-            color: var(--sage-dark);
-            font-weight: bold;
-            margin-right: 0.75rem;
+        .cta-bottom-section p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
         }
 
-        .btn-tier {
-            display: block;
-            text-align: center;
-            background-color: var(--charcoal);
-            color: var(--white);
-            text-decoration: none;
-            padding: 1rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background-color 0.2s ease;
+        .cta-bottom-section .cta-btn-primary {
+            background-color: var(--white);
+            color: var(--charcoal);
+            margin-top: 0;
         }
 
-        .btn-tier:hover {
-            background-color: var(--sage-dark);
+        .cta-bottom-section .cta-btn-primary:hover {
+            background-color: var(--sage-light);
+            color: var(--charcoal);
         }
 
-        .pricing-card.featured .btn-tier {
-            background-color: var(--sage-dark);
-        }
-
-        .pricing-card.featured .btn-tier:hover {
-            background-color: var(--charcoal);
-        }
-
-        /* Footer */
+        /* Footer Basic */
         footer {
             background-color: var(--sand-light);
             padding: 4rem 0;
@@ -368,12 +447,16 @@
                 margin-top: 0.5rem;
             }
 
-            .pricing-section { 
-                background-attachment: scroll; 
+            .page-hero h1 {
+                font-size: 2.5rem;
             }
-            
-            .pricing-grid { 
-                grid-template-columns: 1fr; 
+
+            .cta-bottom-section h2 {
+                font-size: 2.25rem;
+            }
+
+            .cta-bottom-section {
+                background-attachment: scroll;
             }
             
             .footer-wrapper { 
@@ -389,11 +472,7 @@
     <header>
         <div class="container nav-wrapper">
             <a href="/" class="logo-brand">
-               <img src="/Untitled design (14).png" alt="Next Frontier Logo" class="logo-img">
-                <div class="logo-text">
-                    <span class="brand-main">Next Frontier</span>
-                    <span class="brand-sub">Financial Services</span>
-                </div>
+               <img src="../images/NFLOGO.png" alt="Next Frontier Logo" class="logo-img">
             </a>
             <nav class="nav-links">
                 <a href="/">Home</a>
@@ -405,91 +484,227 @@
         </div>
     </header>
 
+    <!-- 1. HERO SECTION -->
     <section class="page-hero">
         <div class="container">
-            <h1>Pristine Bookkeeping Solutions</h1>
-            <p>We manage your day-to-day transactional health so you always know your exact margins, overhead scale, and ultimate cash capacity.</p>
+            <h1>Bookkeeping That Gives You Confidence in Your Numbers</h1>
+            <p>Stop wondering whether your books are accurate. We keep your finances organized, your reports up to date, and your business ready for tax season—all year long.</p>
+            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="cta-btn-primary">Schedule Your Free Consultation</a>
         </div>
     </section>
 
+    <!-- 2. THE PROBLEM SECTION -->
     <section class="section-padding">
         <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Clean Ledger Operations</h3>
-                    <p>Every single line item is sorted and cross-checked against your banking feeds with absolute tracking precision. No unassigned gaps, no guesswork left over at year-end.</p>
+            <div class="section-header">
+                <h2>Does any of this sound familiar?</h2>
+                <p>Running a business is demanding enough without the added stress of messy accounts.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card"><p>You're months behind on bookkeeping.</p></div>
+                <div class="problem-card"><p>You only look at QuickBooks during tax season.</p></div>
+                <div class="problem-card"><p>You're unsure whether transactions are categorized correctly.</p></div>
+                <div class="problem-card"><p>You don't know if your business is actually profitable.</p></div>
+                <div class="problem-card"><p>You're spending evenings catching up instead of running your business.</p></div>
+            </div>
+            <div class="problem-footer">
+                <p>If any of these sound familiar, you're not alone—and they can all be fixed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHAT WE DO SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>We focus on the backend structure so you can focus completely on execution.</p>
+            </div>
+            <div class="outcome-grid">
+                <div class="outcome-card">
+                    <h3>Monthly Bookkeeping</h3>
+                    <p>Accurate books maintained every single month, keeping your records flawless without you lifting a finger.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Proactive Overhead Tracking</h3>
-                    <p>Understand exactly where your cash reserves flow each month. We deliver crisp balance sheets and cash overviews that outline stable paths for infrastructure scaling.</p>
+                <div class="outcome-card">
+                    <h3>Account Reconciliations</h3>
+                    <p>Know that every single asset, liability, bank account, and credit ledger balances correctly with zero transactional gaps.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Smooth Tax Handoff</h3>
-                    <p>Because your business ledgers remain completely clean throughout the calendar year, transitioning into tax seasons is completely seamless—minimizing compliance liability automatically.</p>
+                <div class="outcome-card">
+                    <h3>Financial Reports</h3>
+                    <p>Understand your business inside and out with clear, simplified monthly reporting on margins and cash flow indicators.</p>
+                </div>
+                <div class="outcome-card">
+                    <h3>Tax-Ready Books</h3>
+                    <p>Avoid chaotic year-end surprises. Your ledgers line up perfectly for deduction optimizations well before tax season arrives.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding pricing-section">
+    <!-- 4. THE PROCESS SECTION -->
+    <section class="section-padding">
         <div class="container">
-            
-            <div class="pricing-header">
-                <span>Transparent Subscriptions</span>
-                <h2>Bookkeeping Structures Built for Growth</h2>
+            <div class="section-header">
+                <h2>Our Seamless Process</h2>
+                <p>Getting your financials in order shouldn't be complicated. Here is how we partner with you:</p>
             </div>
-
-            <div class="pricing-grid">
-                
-                <div class="pricing-card">
-                    <div>
-                        <h3 class="tier-name">Bronze</h3>
-                        <div class="tier-price">$450<span>/mo</span></div>
-                        <p class="tier-description">Ideal for single-operator business owners and growing LLCs looking for foundational financial clarity.</p>
-                        <ul class="feature-list">
-                            <li>Up to 2 linked bank/credit accounts</li>
-                            <li>Monthly transaction balancing</li>
-                            <li>Pristine profit & loss reporting</li>
-                            <li>Direct year-end tax prep alignment</li>
-                        </ul>
-                    </div>
-                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-tier">Get Started</a>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Book Consultation</h3>
+                    <p>We look at your structural setup and discuss what your business needs.</p>
                 </div>
-
-                <div class="pricing-card featured">
-                    <span class="badge">Most Popular</span>
-                    <div>
-                        <h3 class="tier-name">Silver</h3>
-                        <div class="tier-price">$750<span>/mo</span></div>
-                        <p class="tier-description">Designed for established companies managing scaling operational teams and overhead channels.</p>
-                        <ul class="feature-list">
-                            <li>Up to 4 linked transaction accounts</li>
-                            <li>Bi-weekly ledger balancing</li>
-                            <li>Quarterly strategy review call</li>
-                            <li>Basic receipt attachment integration</li>
-                            <li>Custom operational cash forecasting</li>
-                        </ul>
-                    </div>
-                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-tier">Select Silver Tier</a>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Secure Onboarding</h3>
+                    <p>We safely plug into your account feeds and securely gather background records.</p>
                 </div>
-
-                <div class="pricing-card">
-                    <div>
-                        <h3 class="tier-name">Gold</h3>
-                        <div class="tier-price">$1,200<span>/mo</span></div>
-                        <p class="tier-description">Comprehensive financial backend oversight for complex systems requiring deep transactional care.</p>
-                        <ul class="feature-list">
-                            <li>Unlimited account feed connections</li>
-                            <li>Weekly ledger audits & tracking</li>
-                            <li>Monthly strategic oversight session</li>
-                            <li>Advanced class/location tracking</li>
-                            <li>Priority messaging support channel</li>
-                        </ul>
-                    </div>
-                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-tier">Select Gold Tier</a>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Monthly Management</h3>
+                    <p>Our professionals categorize and clean up every single line item behind the scenes.</p>
                 </div>
-
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Reports Delivered</h3>
+                    <p>You receive simple, clear, accurate updates detailing exactly where your business stands.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 5. WHAT'S INCLUDED SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Included</h2>
+                <p>Comprehensive operational care wrapped into standard, scannable support structures.</p>
+            </div>
+            <div class="checklist-container">
+                <div class="checkmark-grid">
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Transaction Categorization
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Bank Reconciliation
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Credit Card Reconciliation
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Profit & Loss
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Balance Sheet
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Financial Reports
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Year-End Tax Prep Support
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Ongoing Communication
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Cloud Accounting
+                    </div>
+                    <div class="checklist-item">
+                        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        Financial Organization
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY NEXT FRONTIER SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Next Frontier</h2>
+                <p>The core differentiators that set our financial service management standards apart.</p>
+            </div>
+            <div class="differentiator-grid">
+                <div class="diff-card">
+                    <h3>Accuracy First</h3>
+                    <p>Your books are reviewed carefully before any reports are delivered. We find structural discrepancies early so your balances are always accurate.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>Year-Round Support</h3>
+                    <p>Financial questions don't only happen during tax season. We stay available for proactive discussions all twelve months of the year.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>Cloud-Based Collaboration</h3>
+                    <p>Access your securely managed financial information anywhere, at any time. Your data stays organized securely in real-time cloud channels.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>Built For Small Businesses</h3>
+                    <p>Our operational tracking systems seamlessly scale along with you as your business volume and revenue channels expand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Clear details regarding how our monthly financial bookkeeping oversight works.</p>
+            </div>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary>What accounting systems do you use?</summary>
+                    <p>We work heavily within QuickBooks Online and primary cloud accounting tech stacks to maintain transparent, clean, and real-time records of your financial accounts.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How often will my books be updated?</summary>
+                    <p>We update, cross-reference, and reconcile your line-item entries regularly throughout the month, ensuring full financial clarity is delivered seamlessly right on schedule.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Will you handle my actual tax filings too?</summary>
+                    <p>Yes, because we are a full-service tax firm, your clean bookkeeping perfectly feeds directly into our professional year-end tax planning and corporate filing systems seamlessly.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I securely share my financial data with you?</summary>
+                    <p>We establish read-only data connections and utilize highly encrypted, private practice management portals to safely manage files without interfering with your live operational funds.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What if my bookkeeping is currently months behind?</summary>
+                    <p>Don't worry. We specialize in historical clean-ups. We will catch up on your previous months of backlogged transactions and bring your entire ledger up to absolute code rapidly.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I cancel or change my plan anytime?</summary>
+                    <p>Yes, our professional bookkeeping structures operate under clear monthly agreements, allowing you to easily adjust or scale tiers as your business workflow evolves.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What reports will I receive every month?</summary>
+                    <p>You will regularly receive crystal-clear Profit & Loss statements alongside updated Balance Sheets, giving you a sharp look at overhead paths and accurate profit margins.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do we communicate throughout the month?</summary>
+                    <p>We keep dedicated channels open via our client platform or direct email systems to resolve transaction queries or update account elements instantly.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CONVERSION CTA -->
+    <section class="cta-bottom-section">
+        <div class="container">
+            <h2>Ready to stop worrying about your bookkeeping?</h2>
+            <p>Let us manage the numbers so you can put 100% of your energy back into scaling your company operations.</p>
+            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="cta-btn-primary">Schedule Your Consultation</a>
         </div>
     </section>
 
