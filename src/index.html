@@ -453,7 +453,7 @@
             background-color: var(--sage-dark);
         }
 
-/* Brand Color Rotation Injections */
+        /* Brand Color Rotation Injections */
         .why-choose-us-section {
             background-color: var(--charcoal);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -490,22 +490,78 @@
             background-color: var(--white);
         }
 
+        /* FAQ SECTION STYLES */
+        .faq-section {
+            background: var(--sand-light);
+            border-top: 1px solid rgba(74,93,78,.1);
+            border-bottom: 1px solid rgba(74,93,78,.1);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid rgba(74,93,78,.12);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            font-family: var(--font-sans);
+        }
+
+        .faq-question:hover {
+            background: var(--sage-light);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--sage-dark);
+            transition: .3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .35s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 250px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
         /* Responsive Breakpoints: Ensures it falls back elegantly on smaller viewports */
         @media (max-width: 992px) {
             .why-choose-us-section .focus-grid {
                 grid-template-columns: 1fr !important; /* Stack them cleanly on tablets/phones */
                 gap: 1.5rem;
             }
-        }
-        .why-choose-us-section .focus-card {
-            background-color: var(--white);
-            border: none;
-            box-shadow: 0 10px 30px rgba(74, 93, 78, 0.04);
-            padding: 3rem 2rem; /* Adjusted padding to ensure text breathes perfectly inside narrower cards */
-        }
-
-        .who-we-serve-section {
-            background-color: var(--white);
         }
 
         /* Responsive Fix: Ensure it breaks beautifully on smaller screens */
@@ -520,6 +576,7 @@
                 grid-template-columns: 1fr; /* Stacked into a clean single column layout on phones */
             }
         }
+
         /* Inline Cal.com Embed Environment */
         .booking-section {
             padding: 7rem 0;
@@ -866,6 +923,76 @@
         </div>
     </section>
 
+    <!-- Frequently Asked Questions -->
+    <section class="section-padding faq-section">
+        <div class="container faq-container">
+            <div class="section-header">
+                <span>Frequently Asked Questions</span>
+                <h2>Answers Before You Schedule</h2>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What types of businesses do you work with?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We work with small businesses across a wide range of industries, including service businesses, contractors, consultants, real estate professionals, e-commerce businesses, and growing companies that need reliable bookkeeping and tax support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do I have to be local?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No. We work with businesses remotely using secure cloud-based accounting tools, allowing us to serve clients wherever they operate.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can you clean up my bookkeeping if I'm behind?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Whether you're a few months behind or several years behind, we can organize your financial records and get your books current so you're ready for tax filing and better financial decision making.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you provide tax planning or only tax preparation?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We provide both. Preparing your return is only part of the process. We also help identify tax-saving opportunities throughout the year so there are fewer surprises when filing season arrives.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What accounting software do you use?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We primarily work with modern cloud-based accounting platforms that allow secure collaboration, organized financial records, and easy access to your business information whenever you need it.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I get started?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply schedule a free consultation. We'll learn about your business, answer your questions, and recommend the bookkeeping or tax services that best fit your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Native Cal.com Intake Frame (White Background) -->
     <section id="onboarding-frontier" class="booking-section">
         <div class="booking-container">
@@ -905,6 +1032,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Functionality Engine -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
