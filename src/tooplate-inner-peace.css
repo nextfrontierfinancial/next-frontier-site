@@ -1,0 +1,49 @@
+/* header/logo layout */
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-image {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.logo-text .brand-main {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.logo-text .brand-sub {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1;
+}
+
+/* nav layout: push nav to the right if using a flex container on .nav-wrapper */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 0.4rem 0.8rem;
+  background: #0b6cff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
