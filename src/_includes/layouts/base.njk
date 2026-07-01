@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }} | Next Frontier Financial Services</title>
-    </head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css"> <title>{{ title }}</title>
+</head>
 <body>
-    {% include "layouts/header.njk" %}
-    
-    <main>
-        {{ content | safe }}
-    </main>
+  {% include "header.njk" %}
+  
+  {{ content | safe }}
+  
 
-   
 </body>
 </html>
