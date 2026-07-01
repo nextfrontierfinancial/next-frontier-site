@@ -455,9 +455,17 @@
 
         /* Brand Color Rotation Injections */
         .why-choose-us-section {
-            background-color: var(--sage-light);
-            border-top: 1px solid rgba(74, 93, 78, 0.08);
-            border-bottom: 1px solid rgba(74, 93, 78, 0.08);
+            background-color: var(--charcoal);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        } /* <-- This bracket closes the section background rule */
+
+        .why-choose-us-section .section-header span {
+            color: var(--sage); /* Highlighting the eyebrow text with sage */
+        }
+
+        .why-choose-us-section .section-header h2 {
+            color: var(--white);
         }
 
         .why-choose-us-section .focus-card {
