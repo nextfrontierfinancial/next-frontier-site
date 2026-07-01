@@ -126,7 +126,12 @@
 
         /* Hero Layout */
         .page-hero {
-            background-color: var(--sand-light);
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.92), rgba(42, 53, 46, 0.94)), 
+                              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             padding: 8rem 0;
             text-align: center;
             border-bottom: 1px solid rgba(74, 93, 78, 0.05);
@@ -135,7 +140,7 @@
         .page-hero h1 {
             font-family: var(--font-serif);
             font-size: 3.5rem;
-            color: var(--charcoal);
+            color: var(--white);
             margin-bottom: 1.5rem;
             font-weight: 400;
             line-height: 1.2;
@@ -143,9 +148,19 @@
 
         .page-hero p {
             font-size: 1.25rem;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.85);
             max-width: 750px;
             margin: 0 auto 1.5rem auto;
+        }
+
+        .page-hero .cta-btn-primary {
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+
+        .page-hero .cta-btn-primary:hover {
+            background-color: var(--sage-light);
+            color: var(--charcoal);
         }
 
         .section-padding {
@@ -170,24 +185,46 @@
             font-size: 1.1rem;
         }
 
-        /* Section Background Alternation */
-        .bg-light {
+        /* Dark Section Header Modifier */
+        .section-header.text-white h2 {
+            color: var(--white);
+        }
+
+        .section-header.text-white p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Background Color Alternation classes */
+        .bg-white {
+            background-color: var(--white);
+        }
+
+        .bg-sand {
             background-color: var(--sand-light);
         }
 
-        /* Problem Section */
+        .bg-sage-light {
+            background-color: var(--sage-light);
+        }
+
+        .bg-charcoal {
+            background-color: var(--charcoal);
+        }
+
+        /* Problem Section (6 Even Cards Layout) */
         .problem-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
 
         .problem-card {
-            background-color: var(--sand-light);
+            background-color: var(--white); /* White cards inside Sand background */
             padding: 2.5rem;
             border-radius: 6px;
             border-left: 3px solid var(--sage);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
         }
 
         .problem-card p {
@@ -204,35 +241,35 @@
             margin-top: 3rem;
         }
 
-        /* What We Do Grid */
+        /* What We Do Grid (Dark Cards Layout) */
         .outcome-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2.5rem;
         }
 
-        .outcome-card {
-            background-color: var(--white);
+        .outcome-card-dark {
+            background-color: var(--charcoal);
             padding: 2.5rem;
             border-radius: 6px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-            border: 1px solid rgba(74, 93, 78, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
-        .outcome-card h3 {
+        .outcome-card-dark h3 {
             font-family: var(--font-serif);
             font-size: 1.5rem;
-            color: var(--charcoal);
+            color: var(--white);
             margin-bottom: 0.75rem;
             font-weight: 400;
         }
 
-        .outcome-card p {
-            color: var(--text-muted);
+        .outcome-card-dark p {
+            color: rgba(255, 255, 255, 0.75);
             font-size: 1rem;
         }
 
-        /* The Process Layout */
+        /* The Process Layout (4 Even Steps Layout) */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -295,25 +332,30 @@
             flex-shrink: 0;
         }
 
-        /* Why Next Frontier (Differentiators) */
+        /* Why Next Frontier Differentiators (White Cards Inside Dark Background Layout) */
         .differentiator-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2.5rem;
         }
 
-        .diff-card h3 {
+        .diff-card-light {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .diff-card-light h3 {
             font-family: var(--font-serif);
             font-size: 1.4rem;
             color: var(--charcoal);
             margin-bottom: 0.75rem;
             font-weight: 400;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        .diff-card p {
+        .diff-card-light p {
             color: var(--text-muted);
             font-size: 1rem;
         }
@@ -451,6 +493,10 @@
                 font-size: 2.5rem;
             }
 
+            .page-hero {
+                background-attachment: scroll;
+            }
+
             .cta-bottom-section h2 {
                 font-size: 2.25rem;
             }
@@ -494,7 +540,7 @@
     </section>
 
     <!-- 2. THE PROBLEM SECTION -->
-    <section class="section-padding">
+    <section class="section-padding bg-sand" style="border-top: 1px solid rgba(74, 93, 78, 0.05);">
         <div class="container">
             <div class="section-header">
                 <h2>Does any of this sound familiar?</h2>
@@ -506,6 +552,7 @@
                 <div class="problem-card"><p>You're unsure whether transactions are categorized correctly.</p></div>
                 <div class="problem-card"><p>You don't know if your business is actually profitable.</p></div>
                 <div class="problem-card"><p>You're spending evenings catching up instead of running your business.</p></div>
+                <div class="problem-card"><p>You're stressed by the thought of an audit or missing tax deductions.</p></div>
             </div>
             <div class="problem-footer">
                 <p>If any of these sound familiar, you're not alone—and they can all be fixed.</p>
@@ -514,26 +561,26 @@
     </section>
 
     <!-- 3. WHAT WE DO SECTION -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-sage-light">
         <div class="container">
             <div class="section-header">
                 <h2>What We Do</h2>
                 <p>We focus on the backend structure so you can focus completely on execution.</p>
             </div>
             <div class="outcome-grid">
-                <div class="outcome-card">
+                <div class="outcome-card-dark">
                     <h3>Monthly Bookkeeping</h3>
                     <p>Accurate books maintained every single month, keeping your records flawless without you lifting a finger.</p>
                 </div>
-                <div class="outcome-card">
+                <div class="outcome-card-dark">
                     <h3>Account Reconciliations</h3>
                     <p>Know that every single asset, liability, bank account, and credit ledger balances correctly with zero transactional gaps.</p>
                 </div>
-                <div class="outcome-card">
+                <div class="outcome-card-dark">
                     <h3>Financial Reports</h3>
                     <p>Understand your business inside and out with clear, simplified monthly reporting on margins and cash flow indicators.</p>
                 </div>
-                <div class="outcome-card">
+                <div class="outcome-card-dark">
                     <h3>Tax-Ready Books</h3>
                     <p>Avoid chaotic year-end surprises. Your ledgers line up perfectly for deduction optimizations well before tax season arrives.</p>
                 </div>
@@ -542,7 +589,7 @@
     </section>
 
     <!-- 4. THE PROCESS SECTION -->
-    <section class="section-padding">
+    <section class="section-padding bg-sand">
         <div class="container">
             <div class="section-header">
                 <h2>Our Seamless Process</h2>
@@ -574,7 +621,7 @@
     </section>
 
     <!-- 5. WHAT'S INCLUDED SECTION -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-white">
         <div class="container">
             <div class="section-header">
                 <h2>What's Included</h2>
@@ -627,36 +674,36 @@
         </div>
     </section>
 
-    <!-- 6. WHY NEXT FRONTIER SECTION -->
-    <section class="section-padding">
+    <!-- 6. WHY NEXT FRONTIER SECTION (Updated to Dark Charcoal Background with Light Cards) -->
+    <section class="section-padding bg-charcoal">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-white">
                 <h2>Why Next Frontier</h2>
                 <p>The core differentiators that set our financial service management standards apart.</p>
             </div>
             <div class="differentiator-grid">
-                <div class="diff-card">
+                <div class="diff-card-light">
                     <h3>Accuracy First</h3>
                     <p>Your books are reviewed carefully before any reports are delivered. We find structural discrepancies early so your balances are always accurate.</p>
                 </div>
-                <div class="diff-card">
+                <div class="diff-card-light">
                     <h3>Year-Round Support</h3>
                     <p>Financial questions don't only happen during tax season. We stay available for proactive discussions all twelve months of the year.</p>
                 </div>
-                <div class="diff-card">
+                <div class="diff-card-light">
                     <h3>Cloud-Based Collaboration</h3>
                     <p>Access your securely managed financial information anywhere, at any time. Your data stays organized securely in real-time cloud channels.</p>
                 </div>
-                <div class="diff-card">
-                    <h3>Built For Small Businesses</h3>
-                    <p>Our operational tracking systems seamlessly scale along with you as your business volume and revenue channels expand.</p>
+                <div class="diff-card-light">
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden surprise fees or complex hourly bills. Flat monthly subscriptions keep your professional accounting overhead fully predictable.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 7. FAQ SECTION -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-white">
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
