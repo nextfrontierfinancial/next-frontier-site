@@ -1,52 +1,823 @@
 ---
-title: Business Insights & Small Business Tax Advice
-description: High-intent financial strategies and deep-dive tax analysis tailored for high-growth small business structures.
-layout: layouts/blog-base.njk
+title: Financial Insights & Small Business Tax Advice
+description: Practical bookkeeping guides, tax strategies, and financial planning tools built for modern entrepreneurs.
+layout: src/_includes/layouts/blog-base.njk
 ---
 
 <style>
-  .post-card {
-    margin-bottom: 3.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(74, 93, 78, 0.1);
-  }
-  .post-card h2 {
-    font-family: 'Playfair Display', serif;
-    margin: 0 0 0.5rem 0;
-  }
-  .post-card h2 a {
-    color: var(--charcoal);
-    text-decoration: none;
-  }
-  .post-card h2 a:hover {
-    color: var(--dark-sage);
-  }
-  .excerpt {
-    font-size: 1.05rem;
-    color: #444;
-    margin: 0.5rem 0 1rem 0;
-  }
-  .read-more {
-    color: var(--sage);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
+    /* Resource Center Core Styles */
+    :root {
+        --charcoal: #232B2B;
+        --sage-dark: #4A5D4E;
+        --sage: #7A9A82;
+        --sage-light: #EBF0EC;
+        --sand-light: #F9F8F6;
+        --white: #FFFFFF;
+        --text-main: #2D312E;
+        --text-muted: #5A605B;
+        --font-serif: 'Playfair Display', Georgia, serif;
+        --font-sans: 'Inter', sans-serif;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        color: var(--text-main);
+        background-color: var(--white);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .section-padding {
+        padding: 5rem 0;
+    }
+
+    .bg-sand { background-color: var(--sand-light); }
+    .bg-white { background-color: var(--white); }
+    .bg-charcoal { background-color: var(--charcoal); }
+    .bg-sage-light { background-color: var(--sage-light); }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .section-header h2 {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--charcoal);
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Primary CTA Button Component */
+    .btn-primary {
+        display: inline-block;
+        background-color: var(--charcoal);
+        color: var(--white);
+        text-decoration: none;
+        padding: 0.85rem 1.75rem;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--sage-dark);
+        transform: translateY(-1px);
+    }
+
+    /* Meta tags (Tags + Read Time) */
+    .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+    }
+
+    .meta-tag {
+        color: var(--sage-dark);
+        background-color: var(--sage-light);
+        padding: 0.2rem 0.6rem;
+        border-radius: 3px;
+    }
+
+    .meta-read {
+        color: var(--text-muted);
+    }
+
+    /* 1. HERO SECTION & LIVE SEARCH */
+    .blog-hero {
+        background-color: var(--sand-light);
+        padding: 6rem 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+    }
+
+    .blog-hero h1 {
+        font-family: var(--font-serif);
+        font-size: 3.5rem;
+        color: var(--charcoal);
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .blog-hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        max-width: 800px;
+        margin: 0 auto 2rem auto;
+    }
+
+    .search-container {
+        max-width: 500px;
+        margin: 2.5rem auto 0 auto;
+        position: relative;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 1px solid rgba(74, 93, 78, 0.2);
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: var(--white);
+        color: var(--text-main);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: var(--sage);
+    }
+
+    /* 2. FEATURED GUIDE (HUGE Layout) */
+    .featured-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3.5rem;
+        align-items: center;
+        background-color: var(--white);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .featured-img-wrap img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .featured-content h2 {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--charcoal);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+    }
+
+    .featured-content h2 a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .featured-content h2 a:hover {
+        color: var(--sage);
+    }
+
+    .featured-excerpt {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+    }
+
+    /* 3. BROWSE BY TOPIC (Category Cards with Quantity) */
+    .topic-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+    }
+
+    .topic-card {
+        background-color: var(--white);
+        padding: 2.5rem;
+        border-radius: 6px;
+        border: 1px solid rgba(74, 93, 78, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .topic-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+    }
+
+    .topic-card h3 {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: var(--charcoal);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    }
+
+    .topic-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .topic-count {
+        font-size: 0.85rem;
+        color: var(--sage-dark);
+        background-color: var(--sage-light);
+        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 2rem;
+    }
+
+    .topic-link {
+        color: var(--sage-dark);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .topic-link:hover { color: var(--sage); }
+
+    /* 4. SPLIT LAYOUT (Latest Articles & Sidebars) */
+    .split-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+
+    .recent-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .article-card-horizontal {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .article-img-wrap img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .article-card-horizontal h3 {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+    }
+
+    .article-card-horizontal h3 a {
+        color: var(--charcoal);
+        text-decoration: none;
+    }
+
+    .article-card-horizontal h3 a:hover { color: var(--sage); }
+
+    .article-card-horizontal p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .read-link {
+        color: var(--charcoal);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    .read-link:hover { color: var(--sage); }
+
+    /* Curated Sidebar Elements */
+    .sidebar-block {
+        background-color: var(--sand-light);
+        padding: 2rem;
+        border-radius: 6px;
+        margin-bottom: 2.5rem;
+        border: 1px solid rgba(74, 93, 78, 0.08);
+    }
+
+    .sidebar-block h3 {
+        font-family: var(--font-sans);
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--charcoal);
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--sage);
+        padding-bottom: 0.5rem;
+    }
+
+    .curated-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .curated-list li {
+        display: flex;
+        align-items: start;
+        gap: 0.75rem;
+    }
+
+    .curated-list svg {
+        width: 18px;
+        height: 18px;
+        stroke: var(--sage-dark);
+        stroke-width: 2.5;
+        fill: none;
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+    }
+
+    .curated-list a {
+        color: var(--text-main);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    .curated-list a:hover { color: var(--sage); }
+
+    /* Inside Content Section Conversion Banner */
+    .inline-callout {
+        background-color: var(--sage-light);
+        padding: 2.5rem;
+        border-radius: 6px;
+        text-align: center;
+        margin: 4rem 0;
+        border-left: 4px solid var(--sage-dark);
+    }
+
+    .inline-callout h4 {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        color: var(--charcoal);
+        margin-bottom: 0.5rem;
+    }
+
+    .inline-callout p {
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+    }
+
+    /* 5. DOWNLOADABLE LEAD MAGNETS */
+    .download-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .download-card {
+        background-color: var(--white);
+        padding: 1.5rem;
+        border-radius: 6px;
+        border: 1px solid rgba(74, 93, 78, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .download-card:hover {
+        background-color: var(--sand-light);
+    }
+
+    .download-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .download-icon {
+        background-color: var(--sage-light);
+        color: var(--sage-dark);
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+    }
+
+    .download-title {
+        color: var(--charcoal);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .download-arrow {
+        color: var(--sage);
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    /* 6. SOCIAL PROOF ARCHOR */
+    .social-proof-bar {
+        text-align: center;
+        border-top: 1px solid rgba(74, 93, 78, 0.1);
+        border-bottom: 1px solid rgba(74, 93, 78, 0.1);
+        padding: 4.5rem 0;
+    }
+
+    .social-proof-bar h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        color: var(--charcoal);
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    .social-proof-bar p {
+        color: var(--text-muted);
+        max-width: 750px;
+        margin: 0 auto 1.5rem auto;
+        font-size: 1.1rem;
+    }
+
+    /* 7. NEWSLETTER CAPTURE SECTION */
+    .newsletter-section {
+        color: var(--white);
+        text-align: center;
+    }
+
+    .newsletter-section h2 {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-section p {
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+        font-size: 1.1rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 0.5rem;
+    }
+
+    .newsletter-form input[type="email"] {
+        flex: 1;
+        padding: 0.85rem 1rem;
+        border-radius: 4px;
+        border: 1px solid rgba(255,255,255,0.2);
+        background-color: rgba(255,255,255,0.1);
+        color: var(--white);
+        font-size: 1rem;
+    }
+
+    .newsletter-form input[type="email"]::placeholder {
+        color: rgba(255,255,255,0.5);
+    }
+
+    .newsletter-form .btn-submit {
+        background-color: var(--white);
+        color: var(--charcoal);
+        font-weight: 600;
+        padding: 0.85rem 1.75rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .newsletter-form .btn-submit:hover {
+        background-color: var(--sage-light);
+    }
+
+    /* 8. INSTITUTIONAL CLOSING CTA */
+    .closing-cta {
+        text-align: center;
+        padding: 6rem 0;
+    }
+
+    .closing-cta h2 {
+        font-family: var(--font-serif);
+        font-size: 2.8rem;
+        color: var(--charcoal);
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    .closing-cta p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        max-width: 650px;
+        margin: 0 auto 2rem auto;
+    }
+
+    /* Responsive Media Adjustments */
+    @media (max-width: 992px) {
+        .featured-container { grid-template-columns: 1fr; gap: 2rem; }
+        .featured-img-wrap img { height: 320px; }
+        .split-layout { grid-template-columns: 1fr; gap: 3.5rem; }
+    }
+
+    @media (max-width: 600px) {
+        .blog-hero h1 { font-size: 2.5rem; }
+        .article-card-horizontal { grid-template-columns: 1fr; gap: 1rem; }
+        .article-img-wrap img { height: 200px; }
+        .newsletter-form { flex-direction: column; }
+    }
 </style>
 
-<section class="blog-intro" style="margin-bottom: 4rem; text-align: center;">
-  <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: var(--dark-sage);">
-    Strategic insights, tax code analysis, and operational financial planning built exclusively for modern entrepreneurs.
-  </p>
+<!-- 1. HERO SECTION & LIVE SEARCH -->
+<section class="blog-hero">
+    <div class="container">
+        <h1>Financial Insights for Growing Businesses</h1>
+        <p>Real-world bookkeeping advice, tax strategies, and practical financial guidance—written to help business owners make smarter decisions.</p>
+        <a href="#browse-topics" class="btn-primary">Browse Articles</a>
+        
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search articles, insights, or checklists...">
+        </div>
+    </div>
 </section>
 
-<div class="posts-list">
-  {% for post in collections.posts %}
-    <article class="post-card">
-      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-      <div style="font-size: 0.85rem; color: var(--sage); margin-bottom: 0.75rem;">{{ post.date.toDateString() }}</div>
-      <p class="excerpt">{{ post.data.excerpt }}</p>
-      <a class="read-more" href="{{ post.url }}">Read Strategy Overview →</a>
-    </article>
-  {% endfor %}
-</div>
+<!-- 2. FEATURED GUIDE (Dominated Premium View Layout) -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="featured-container">
+            <div class="featured-img-wrap">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" alt="Small Business Tax Planning Strategy">
+            </div>
+            <div class="featured-content">
+                <div class="post-meta">
+                    <span class="meta-tag">Featured Guide</span>
+                    <span class="meta-read">12 min read</span>
+                </div>
+                <h2><a href="/blog/complete-small-business-tax-planning-guide/">The Complete Small Business Tax Planning Guide</a></h2>
+                <p class="featured-excerpt">Everything every business owner should know before tax season arrives. Learn how to structure deductions, avoid structural mistakes, and protect your margins early.</p>
+                <a href="/blog/complete-small-business-tax-planning-guide/" class="btn-primary">Read Guide &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. BROWSE BY TOPIC (Authoritative Category Cards) -->
+<section id="browse-topics" class="section-padding bg-sand">
+    <div class="container">
+        <div class="section-header">
+            <h2>Browse by Topic</h2>
+            <p>Skip the chronological scroll and jump directly into the frameworks your company needs right now.</p>
+        </div>
+        
+        <div class="topic-grid">
+            <!-- Box 1: Bookkeeping -->
+            <div class="topic-card">
+                <div>
+                    <h3>Bookkeeping</h3>
+                    <p>Learn how to keep clean books, understand reports, and avoid costly mistakes.</p>
+                    <span class="topic-count">23 Articles</span>
+                </div>
+                <a href="/blog/category/bookkeeping/" class="topic-link">View Articles &rarr;</a>
+            </div>
+
+            <!-- Box 2: Tax Strategy -->
+            <div class="topic-card">
+                <div>
+                    <h3>Tax Strategy</h3>
+                    <p>Reduce taxes legally through year-round tracking, optimization, and preparation frameworks.</p>
+                    <span class="topic-count">19 Articles</span>
+                </div>
+                <a href="/blog/category/tax-strategy/" class="topic-link">View Articles &rarr;</a>
+            </div>
+
+            <!-- Box 3: Small Business -->
+            <div class="topic-card">
+                <div>
+                    <h3>Small Business</h3>
+                    <p>Comprehensive look into cash flow, company growth tracks, hiring frameworks, and system optimization rules.</p>
+                    <span class="topic-count">18 Articles</span>
+                </div>
+                <a href="/blog/category/small-business/" class="topic-link">View Articles &rarr;</a>
+            </div>
+
+            <!-- Box 4: Business Structure -->
+            <div class="topic-card">
+                <div>
+                    <h3>Business Structure</h3>
+                    <p>LLC architecture, S-Corp elections, C-Corp structural paths, and choosing the perfect legal entity framework.</p>
+                    <span class="topic-count">11 Articles</span>
+                </div>
+                <a href="/blog/category/business-structure/" class="topic-link">View Articles &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. SPLIT LAYOUT: LATEST ARTICLES & CURATED SIDEBARS -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="split-layout">
+            
+            <!-- Left Panel: Recent Articles Execution Loop -->
+            <div>
+                <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 2.5rem; color: var(--charcoal); font-weight: 400;">Recent Articles</h2>
+                <div class="recent-list">
+                    
+                    <!-- Dynamic Eleventy collection rendering engine mapping hook -->
+                    {% for post in collections.posts %}
+                    <article class="article-card-horizontal">
+                        <div class="article-img-wrap">
+                            <img src="{{ post.data.featured_image | default('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80') }}" alt="{{ post.data.title }}">
+                        </div>
+                        <div>
+                            <div class="post-meta">
+                                <span class="meta-tag">{{ post.data.category | default('Financial Planning') }}</span>
+                                <span class="meta-read">{{ post.data.read_time | default('7 min read') }}</span>
+                            </div>
+                            <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                            <p>{{ post.data.excerpt | default('Many small businesses overpay because they overlook critical deductions they are legally entitled to claim. Here is what to know.') }}</p>
+                            <a href="{{ post.url }}" class="read-link">Read Strategy Overview &rarr;</a>
+                        </div>
+                    </article>
+                    {% endfor %}
+
+                    <!-- Standard Hardcoded Fallback Item for Mock Review -->
+                    <article class="article-card-horizontal">
+                        <div class="article-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Deductions Insight">
+                        </div>
+                        <div>
+                            <div class="post-meta">
+                                <span class="meta-tag">Tax Planning</span>
+                                <span class="meta-read">7 min read</span>
+                            </div>
+                            <h3><a href="#">Are You Missing These Business Tax Deductions?</a></h3>
+                            <p>Many small businesses overpay because they overlook critical deductions they are legally entitled to claim. Here is what you need to track.</p>
+                            <a href="#" class="read-link">Read Strategy Overview &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- High-Converting Content Box Callout Block -->
+                <div class="inline-callout">
+                    <h4>Need help applying what you just learned?</h4>
+                    <p>Reading about bookkeeping and regulatory code is helpful. Having dedicated accounting professionals manage execution maps is even better.</p>
+                    <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-primary">Schedule Your Consultation</a>
+                </div>
+            </div>
+
+            <!-- Right Panel: Navigation Paths & Collections -->
+            <div>
+                <!-- Navigation Block 1: Start Here Navigation Funnel -->
+                <div class="sidebar-block">
+                    <h3>New Here? Start Here</h3>
+                    <ul class="curated-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke="currentColor"/></svg>
+                            <a href="/blog/how-bookkeeping-helps-your-business/">How Bookkeeping Helps Your Business</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke="currentColor"/></svg>
+                            <a href="/blog/difference-between-tax-planning-tax-preparation/">The Difference Between Tax Planning & Tax Preparation</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke="currentColor"/></svg>
+                            <a href="/blog/should-you-become-an-s-corp/">Should You Become an S-Corp?</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke="currentColor"/></svg>
+                            <a href="/blog/understanding-financial-statements/">Understanding Financial Statements</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Navigation Block 2: Curated Checklist Links Hub -->
+                <div class="sidebar-block">
+                    <h3>Most Read Guides</h3>
+                    <ul class="curated-list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            <a href="#">Bookkeeping Checklist for New Businesses</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            <a href="#">S-Corp Election Explained</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            <a href="#">Quarterly Estimated Taxes</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            <a href="#">Small Business Tax Deductions</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            <a href="#">Bookkeeping vs Accounting</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 5. DOWNLOADABLE RESOURCES (Lead Magnet Matrix) -->
+<section class="section-padding bg-sand">
+    <div class="container">
+        <div class="section-header">
+            <h2>Free Small Business Toolkits</h2>
+            <p>Instantly download curated execution resources designed to capture hidden deductions and track operational cash flow metrics.</p>
+        </div>
+        <div class="download-grid">
+            <a href="#" class="download-card">
+                <div class="download-info">
+                    <div class="download-icon">PDF</div>
+                    <span class="download-title">Tax Savings Checklist</span>
+                </div>
+                <span class="download-arrow">&darr;</span>
+            </a>
+            <a href="#" class="download-card">
+                <div class="download-info">
+                    <div class="download-icon">XLS</div>
+                    <span class="download-title">Business Expense Tracker</span>
+                </div>
+                <span class="download-arrow">&darr;</span>
+            </a>
+            <a href="#" class="download-card">
+                <div class="download-info">
+                    <div class="download-icon">PDF</div>
+                    <span class="download-title">Quarterly Tax Calendar</span>
+                </div>
+                <span class="download-arrow">&darr;</span>
+            </a>
+            <a href="#" class="download-card">
+                <div class="download-info">
+                    <div class="download-icon">PDF</div>
+                    <span class="download-title">Year-End Bookkeeping List</span>
+                </div>
+                <span class="download-arrow">&darr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 6. SOCIAL PROOF ARCHOR BAR -->
+<section class="social-proof-bar bg-white">
+    <div class="container">
+        <h3>Trusted Financial Guidance</h3>
+        <p>Growing business operations rely completely on Next Frontier Financial Services for clean bookkeeping, comprehensive corporate tax optimization frameworks, and reliable monthly operational analysis.</p>
+        <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-primary">Book Your Strategy Consultation</a>
+    </div>
+</section>
+
+<!-- 7. INSIGHTS NEWSLETTER BLOCK -->
+<section class="section-padding bg-charcoal newsletter-section">
+    <div class="container">
+        <h2>Stay Ahead of Tax Season</h2>
+        <p>Get practical bookkeeping tips, tax planning reminders, and structural updates delivered occasionally—no fluff, just clean financial tools for business owners.</p>
+        <form class="newsletter-form" action="#" method="POST">
+            <input type="email" placeholder="Enter your business email" required aria-label="Business Email Address">
+            <button type="submit" class="btn-submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- 8. FINAL WEBSITE CLOSING FOOTER CTA -->
+<section class="closing-cta bg-white">
+    <div class="container">
+        <h2>Ready for Better Financial Clarity?</h2>
+        <p>Whether you need professional monthly bookkeeping execution, year-end entity filing, or proactive planning, we are here to simplify your accounting overhead.</p>
+        <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Schedule Your Consultation</a>
+    </div>
+</section>
