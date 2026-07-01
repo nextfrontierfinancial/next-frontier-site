@@ -473,13 +473,17 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr) !important; 
             gap: 2rem;
+            align-items: stretch; /* Forces all grid items to take the maximum height */
         }
 
         .why-choose-us-section .focus-card {
             background-color: var(--white);
             border: none;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            padding: 4rem 3rem; /* Expanded padding to fill out the new wide shapes beautifully */
+            padding: 4rem 3rem; 
+            display: flex; /* Makes the card an internal flexible container */
+            flex-direction: column; /* Stacks the headline and paragraph vertically */
+            height: 100%; /* Guarantees full container height utilization */
         }
 
         .who-we-serve-section {
