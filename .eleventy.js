@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
 
   // 1. Update this to match where your CSS file is located
   // Since you said your CSS file is in the 'src' folder:
-  eleventyConfig.addPassthroughCopy("src/*.css"); 
+ eleventyConfig.addPassthroughCopy("src/tooplate-inner-peace.css");
   
   // Keep your images pass-through
   eleventyConfig.addPassthroughCopy("images");
