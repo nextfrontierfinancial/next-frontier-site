@@ -1,20 +1,16 @@
 module.exports = function(eleventyConfig) {
-  // Sort posts automatically so the newest is always on top
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
-  });
+  // 1. Copy your CSS and Images to the output folder
+  eleventyConfig.addPassthroughCopy("src/tooplate-inner-peace.css");
+  eleventyConfig.addPassthroughCopy("src/images");
 
-
- eleventyConfig.addPassthroughCopy("src/tooplate-inner-peace.css");
-  
- 
-  eleventyConfig.addPassthroughCopy("images");
-
+  // 2. Set the input and output directories
   return {
     dir: {
       input: "src",
-      output: "public",
+      output: "public", // This is where the live site files will be generated
       includes: "_includes"
-    }
+    },
+    // 3. Ensure Eleventy processes these file types
+    templateFormats: ["njk", "md", "html"]
   };
 };
