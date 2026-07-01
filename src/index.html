@@ -468,13 +468,31 @@
             color: var(--white);
         }
 
-        /* 4-Column Balanced Grid Layout */
+        /* Forces exactly 3 balanced columns that stretch perfectly to the edges */
         .why-choose-us-section .focus-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Forces exactly 4 equal columns on desktop */
-            gap: 1.5rem; /* Slightly tighter gap so text fits beautifully side-by-side */
+            grid-template-columns: repeat(3, 1fr) !important; 
+            gap: 2rem;
         }
 
+        .why-choose-us-section .focus-card {
+            background-color: var(--white);
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 4rem 3rem; /* Expanded padding to fill out the new wide shapes beautifully */
+        }
+
+        .who-we-serve-section {
+            background-color: var(--white);
+        }
+
+        /* Responsive Breakpoints: Ensures it falls back elegantly on smaller viewports */
+        @media (max-width: 992px) {
+            .why-choose-us-section .focus-grid {
+                grid-template-columns: 1fr !important; /* Stack them cleanly on tablets/phones */
+                gap: 1.5rem;
+            }
+        }
         .why-choose-us-section .focus-card {
             background-color: var(--white);
             border: none;
