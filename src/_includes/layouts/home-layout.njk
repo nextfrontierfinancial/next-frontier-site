@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    {{ pageCss | safe }} <!-- Move this inside! -->
+    
+    <!-- This links your global CSS -->
+    <link rel="stylesheet" href="/tooplate-inner-peace.css">
+    
+    {{ pageCss | safe }}
 </head>
 <body>
     {% include "layouts/header.njk" %}
