@@ -1,0 +1,3 @@
+/tax-school.html  /tax-school/           301!
+/tax-school.html/ /tax-school/           301!
+/tax-school.html/* /tax-school/:splat   301!
