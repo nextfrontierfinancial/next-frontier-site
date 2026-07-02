@@ -1,3 +1,9 @@
 [build]
   command = "npx @11ty/eleventy"
   publish = "public"
+
+[[redirects]]
+  from = "/tax-school.html"
+  to = "/tax-school/"
+  status = 301
+  force = true
