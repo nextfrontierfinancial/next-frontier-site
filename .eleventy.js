@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
   // 1. Copy your CSS and Images to the output folder
-  eleventyConfig.addPassthroughCopy("src/tooplate-inner-peace.css");
+ eleventyConfig.addPassthroughCopy("*.css");;
   eleventyConfig.addPassthroughCopy("src/images");
 
   // 2. Set the input and output directories
