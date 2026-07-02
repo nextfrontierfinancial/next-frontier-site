@@ -7,3 +7,15 @@
   to = "/tax-school/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/tax-school.html/"
+  to = "/tax-school/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tax-school.html/*"
+  to = "/tax-school/"
+  status = 301
+  force = true
