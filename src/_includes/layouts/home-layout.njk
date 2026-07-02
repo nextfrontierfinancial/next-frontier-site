@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-{{ pageCss | safe }}
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    </head>
+    {{ pageCss | safe }} <!-- Move this inside! -->
+</head>
 <body>
-
-{% include "layouts/header.njk" %}
-
+    {% include "layouts/header.njk" %}
     <main>
         {{ content | safe }}
     </main>
