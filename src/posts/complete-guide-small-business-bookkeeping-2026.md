@@ -1,10 +1,4 @@
----
-title: "The Complete Guide to Small Business Bookkeeping in 2026"
-description: "Master your financials this year. This ultimate, comprehensive guide covers small business bookkeeping strategies, digital tools, tax readiness, and common pitfalls to avoid."
-date: 2026-06-05
-tags: posts
-layout: layouts/blog-base.njk
----
+
 
 The landscape of running a small business is shifting fast. In 2026, relying on outdated manual ledgers or simple guesswork isn't just inefficient—it's risky. 
 
