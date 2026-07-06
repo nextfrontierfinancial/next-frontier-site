@@ -1,10 +1,3 @@
----
-title: "Why Business Bookkeeping is the Number One Thing Business Owners Neglect"
-description: "Most entrepreneurs don't start a company to manage spreadsheets. Discover why bookkeeping gets pushed to the back burner—and how neglecting it stalls your business growth."
-date: 2026-06-04
-tags: posts
-layout: layouts/blog-base.njk
----
 
 Every small business owner starts with a vision. You want to build an incredible product, offer a transformative service, or disrupt a local market. 
 
