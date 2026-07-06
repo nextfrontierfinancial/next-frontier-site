@@ -1,10 +1,5 @@
----
-title: "The Difference Between Bookkeeping and Accounting (and Why It Matters)"
-description: "Are bookkeeping and accounting the same thing? Not quite. Learn how these two distinct financial roles work together to protect and grow your business."
-date: 2026-06-06
-tags: posts
-layout: layouts/blog-base.njk
----
+
+
 
 In the small business world, people tend to throw the words "bookkeeping" and "accounting" into the exact same bucket. 
 
