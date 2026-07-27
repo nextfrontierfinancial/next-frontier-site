@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&family=Playfair+Display:ital,wght=0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* Modern CSS Reset & Core Brand Variables */
@@ -41,7 +41,7 @@
             background-color: var(--white);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Ensures seamless gliding down to the embed frame */
         }
 
         .container {
@@ -55,7 +55,7 @@
         header {
             background-color: rgba(249, 248, 246, 0.95);
             backdrop-filter: blur(10px);
-            padding: 1rem 0; 
+            padding: 0.5rem 0; 
             position: sticky;
             top: 0;
             z-index: 100;
@@ -70,21 +70,25 @@
 
         .logo-brand {
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             text-decoration: none;
-            gap: 1rem;
+            gap: 0;
         }
 
         .logo-img {
-            width: 50px;
+            width: 180px;
             height: auto;
+            margin-bottom: 0px;
             display: block;
         }
 
         .logo-text {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            margin-top: 0;
         }
 
         .brand-main {
@@ -97,16 +101,11 @@
 
         .brand-sub {
             font-family: var(--font-sans);
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
+            margin-top: 4px;
         }
 
         nav a {
@@ -124,50 +123,39 @@
 
         .nav-btn {
             background-color: var(--charcoal);
-            color: var(--white) !important;
-            padding: 0.7rem 1.4rem;
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
             border-radius: 4px;
             transition: background-color 0.2s ease;
         }
 
         .nav-btn:hover {
             background-color: var(--sage-dark);
+            color: var(--white);
         }
 
-        /* Split Hero Layout */
-        .hero-split {
+        /* Hero Section */
+        .hero {
             background-color: var(--sand-light);
-            padding: 8rem 0;
+            padding: 10rem 0;
+            text-align: center;
             border-bottom: 1px solid rgba(74, 93, 78, 0.05);
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
+        .hero h1 {
             font-family: var(--font-serif);
             font-size: 3.5rem;
             color: var(--charcoal);
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
             font-weight: 400;
         }
 
-        .hero-content p {
-            font-size: 1.15rem;
+        .hero p {
+            font-size: 1.25rem;
             color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 3rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
         }
 
         .btn-primary {
@@ -185,59 +173,6 @@
             background-color: var(--sage-dark);
         }
 
-        .btn-secondary {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--charcoal);
-            text-decoration: none;
-            padding: 1rem 2rem;
-            font-weight: 600;
-            border: 1px solid var(--charcoal);
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--charcoal);
-            color: var(--white);
-        }
-
-        .hero-showcase {
-            background-color: var(--white);
-            border: 1px solid rgba(74, 93, 78, 0.12);
-            padding: 3rem;
-            border-radius: 6px;
-            box-shadow: 0 20px 40px rgba(35, 43, 43, 0.04);
-        }
-
-        .hero-showcase h3 {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-        }
-
-        .trust-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .trust-list li {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .trust-list li span {
-            color: var(--sage-dark);
-            font-weight: bold;
-        }
-
         /* Section Global Settings */
         .section-padding {
             padding: 7rem 0;
@@ -245,8 +180,9 @@
 
         .section-header {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 5rem auto;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
         }
 
         .section-header span {
@@ -255,27 +191,26 @@
             letter-spacing: 2px;
             color: var(--sage-dark);
             font-weight: 600;
-            display: block;
-            margin-bottom: 0.75rem;
         }
 
         .section-header h2 {
             font-family: var(--font-serif);
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             color: var(--charcoal);
+            margin-top: 0.5rem;
             font-weight: 400;
-            line-height: 1.3;
         }
 
         /* Process Section with Mountain Background */
         .process-section {
             position: relative;
             background-color: var(--charcoal);
-            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.7), rgba(42, 53, 46, 0.8)), 
+            background-image: linear-gradient(to bottom, rgba(35, 43, 43, 0.55), rgba(42, 53, 46, 0.65)), 
                               url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            border-top: 1px solid rgba(74, 93, 78, 0.1);
         }
 
         .process-section .section-header span { color: var(--sage); }
@@ -285,19 +220,23 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .process-card {
             background-color: rgba(255, 255, 255, 0.98); 
-            padding: 3.5rem 2.5rem;
+            padding: 3rem 2rem;
             border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: left;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .process-icon {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background-color: var(--sage-light);
             color: var(--sage-dark);
@@ -306,26 +245,27 @@
             justify-content: center;
             font-weight: 600;
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .process-card h3 {
             font-family: var(--font-serif);
             font-size: 1.4rem;
             color: var(--charcoal);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             font-weight: 400;
         }
 
         /* About Section Styles */
         .about-section {
             background-color: var(--white);
+            border-bottom: 1px solid rgba(74, 93, 78, 0.1);
         }
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 5rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
             align-items: center;
         }
 
@@ -336,14 +276,13 @@
         .about-image {
             width: 100%;
             height: auto;
-            max-height: 520px;
+            max-height: 500px;
             object-fit: cover;
             border-radius: 4px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-            position: relative;
-            z-index: 2;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
         }
 
+        /* Subtle frame behind portrait */
         .about-image-container::before {
             content: '';
             position: absolute;
@@ -353,78 +292,51 @@
             height: 100%;
             border: 1px solid var(--sage);
             border-radius: 4px;
-            z-index: 1;
-        }
-
-        .about-content span {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--sage-dark);
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.75rem;
+            z-index: -1;
         }
 
         .about-content h3 {
             font-family: var(--font-serif);
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             color: var(--charcoal);
             margin-bottom: 1.5rem;
             font-weight: 400;
-            line-height: 1.25;
         }
 
         .about-content p {
             color: var(--text-muted);
             font-size: 1.05rem;
             margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .about-highlights {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .highlight-item {
-            font-weight: 500;
-            color: var(--charcoal);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.95rem;
         }
 
         /* Directional Focus Navigation Grid */
         .focus-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
         }
 
         .focus-card {
             background-color: var(--white);
-            border: 1px solid rgba(74, 93, 78, 0.12);
+            border: 1px solid rgba(74, 93, 78, 0.15);
             border-radius: 6px;
             padding: 4rem 3rem;
+            text-align: left;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .focus-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(35,43,43,0.05);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.04);
             border-color: var(--sage);
         }
 
         .focus-card h3 {
             font-family: var(--font-serif);
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--charcoal);
             margin-bottom: 1rem;
             font-weight: 400;
@@ -432,9 +344,9 @@
 
         .focus-card p {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 1.05rem;
             margin-bottom: 2.5rem;
-            line-height: 1.6;
+            flex-grow: 1;
         }
 
         .btn-focus {
@@ -446,182 +358,71 @@
             padding: 1rem 2rem;
             border-radius: 4px;
             font-weight: 600;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         .btn-focus:hover {
             background-color: var(--sage-dark);
         }
 
-        /* Brand Color Rotation Injections */
-        .why-choose-us-section {
-            background-color: var(--charcoal);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .why-choose-us-section .section-header span {
-            color: var(--sage);
-        }
-
-        .why-choose-us-section .section-header h2 {
+        /* Portability Showcase Section */
+        .portability-banner {
+            position: relative;
+            background-image: linear-gradient(to right, rgba(35, 43, 43, 0.95), rgba(35, 43, 43, 0.85)), 
+                              url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
             color: var(--white);
+            padding: 8rem 0;
         }
 
-        .why-choose-us-section .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr) !important; 
-            gap: 2rem;
-            align-items: stretch;
+        .portability-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .why-choose-us-section .focus-card {
-            background-color: var(--white);
-            border: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            padding: 4rem 3rem; 
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        /* Who We Serve Redesign Styles */
-        .who-we-serve-section {
-            background: var(--sage-light);
-        }
-
-        .support-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .support-card {
-            background: var(--charcoal);
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 12px 35px rgba(0,0,0,.08);
-            transition: .25s;
-        }
-
-        .support-card:hover {
-            transform: translateY(-5px);
-            background: var(--sage-dark);
-        }
-
-        .support-card-icon {
-            color: var(--sage);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .support-card-icon svg {
-            width: 32px;
-            height: 32px;
-            fill: currentColor;
-        }
-
-        .support-card h3 {
-            color: var(--white);
+        .portability-content h2 {
             font-family: var(--font-serif);
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
-        .support-card p {
-            color: rgba(255, 255, 255, .82);
-            line-height: 1.7;
-            font-size: 0.98rem;
+        .editorial-quote {
+            margin-top: 3rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
         }
 
-        /* FAQ Accordion Styling Mechanics */
-        .faq-section {
+        .editorial-quote blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto 1rem auto;
+        }
+
+        .editorial-quote cite {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        /* Inline Cal.com Embed Environment */
+        .booking-section {
+            padding: 7rem 0;
             background-color: var(--sand-light);
             border-top: 1px solid rgba(74, 93, 78, 0.1);
             border-bottom: 1px solid rgba(74, 93, 78, 0.1);
-        }
-
-        .faq-container {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background-color: var(--white);
-            border: 1px solid rgba(74, 93, 78, 0.12);
-            border-radius: 4px;
-            margin-bottom: 1.25rem;
-            box-shadow: 0 4px 12px rgba(35, 43, 43, 0.01);
-            overflow: hidden;
-            transition: all 0.2s ease;
-        }
-
-        .faq-trigger {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: left;
-            cursor: pointer;
-            font-family: var(--font-sans);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--charcoal);
-        }
-
-        .faq-trigger:hover {
-            background-color: rgba(122, 154, 130, 0.04);
-        }
-
-        .faq-icon {
-            font-size: 1.4rem;
-            font-weight: 300;
-            color: var(--sage-dark);
-            transition: transform 0.3s ease;
-            display: inline-block;
-            line-height: 1;
-        }
-
-        .faq-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-        }
-
-        .faq-content p {
-            padding: 0 2rem 1.5rem 2rem;
-            color: var(--text-muted);
-            font-size: 0.98rem;
-            line-height: 1.65;
-        }
-
-        /* Active State Architecture via JS Toggle */
-        .faq-item.is-active {
-            border-color: var(--sage);
-            box-shadow: 0 10px 25px rgba(74, 93, 78, 0.04);
-        }
-
-        .faq-item.is-active .faq-content {
-            max-height: 500px; 
-            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .faq-item.is-active .faq-icon {
-            transform: rotate(45deg);
-            color: var(--sage);
-        }
-
-        /* Inline Cal.com Embed Environment - Soft Light Sage Background */
-        .booking-section {
-            padding: 7rem 0;
-            background-color:var(--sage-light); /* Kept as light sage for balanced aesthetic layout */
         }
 
         .booking-container {
@@ -658,16 +459,22 @@
         .booking-intro p {
             font-size: 1.1rem;
             color: var(--text-muted);
+            line-height: 1.6;
         }
 
         .scheduler-frame-wrapper {
-            background-color: var(--white); /* White card frame to let widget interface blend cleanly */
-            border: 1px solid rgba(74, 93, 78, 0.12);
-            border-radius: 8px;
-            box-shadow: 0 20px 50px rgba(35, 43, 43, 0.06);
+            background-color: var(--white);
+            border: 1px solid rgba(74, 93, 78, 0.15);
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(35, 43, 43, 0.04);
             overflow: hidden;
             height: 700px; 
             width: 100%;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .scheduler-frame-wrapper:hover {
+            box-shadow: 0 15px 40px rgba(35, 43, 43, 0.08);
         }
 
         /* Engagement Banner */
@@ -676,6 +483,7 @@
             color: var(--white);
             padding: 6rem 0;
             text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .cta-banner h2 {
@@ -685,7 +493,7 @@
             font-weight: 400;
         }
 
-        .btn-banner-action {
+        .btn-secondary {
             display: inline-block;
             background-color: var(--sage);
             color: var(--charcoal);
@@ -696,7 +504,7 @@
             transition: background-color 0.2s ease;
         }
 
-        .btn-banner-action:hover {
+        .btn-secondary:hover {
             background-color: var(--sage-light);
         }
 
@@ -715,271 +523,177 @@
             align-items: center;
         }
 
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 1.5rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--sage-dark);
-        }
-
-        /* Responsive Breakpoints */
-        @media(max-width:992px){
-            .support-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .why-choose-us-section .focus-grid {
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem;
-            }
-        }
-
-        @media (max-width: 1100px) {
-            .why-choose-us-section .focus-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media(max-width:768px){
-            .support-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .why-choose-us-section .focus-grid {
-                grid-template-columns: 1fr;
-            }
-            .faq-trigger {
-                padding: 1.25rem 1.5rem;
-                font-size: 1rem;
-            }
-            .faq-content p {
-                padding: 0 1.5rem 1.25rem 1.5rem;
-            }
-        }
-
         @media (max-width: 992px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
-            .hero-buttons { justify-content: center; }
             .about-grid { grid-template-columns: 1fr; gap: 3rem; }
             .about-image-container { max-width: 500px; margin: 0 auto; }
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.6rem; }
-            .section-header h2 { font-size: 2rem; }
-            .nav-wrapper { flex-direction: column; gap: 1rem; }
-            .nav-links { margin-top: 1rem; }
-            nav a { margin: 0 0.75rem; font-size: 0.9rem; }
-            .nav-btn { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .guarantee-container { padding: 2rem 1.5rem; margin-top: 3.5rem; }
+            .pricing-section { background-attachment: scroll; }
+
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+
+            .nav-links {
+                display: flex !important; 
+                justify-content: center;
+                width: 100%;
+                margin: 0;
+            }
+
+            nav a {
+                margin: 0 0.75rem; 
+                font-size: 0.9rem;
+            }
+
+            .nav-btn {
+                display: none; 
+            }
+
+            .scheduler-frame-wrapper {
+                height: 750px; 
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-    <div class="container nav-wrapper">
-        <a href="/" class="logo-brand">
-            <!-- Fixed: Using absolute path to ensure image loads on every page -->
-            <img src="https://nextfrontierfinancialservices.com/NFLOGO.png" alt="Next Frontier Logo" class="logo-img">
-            <div class="logo-text">
-                <span class="brand-main">Next Frontier</span>
-                <span class="brand-sub">Financial Services</span>
-            </div>
-        </a>
-        <nav class="nav-links">
-            <a href="/">Home</a>
-            <a href="/bookkeeping/">Bookkeeping</a>
-            <a href="/tax-services/">Tax Services</a>
-            <a href="/tax-school.html">Tax School</a>
-            <a href="/blog/">Blog</a>
-            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="nav-btn">Secure Your Consultation</a>
-        </nav>
-    </div>
-</header>
+        <div class="container nav-wrapper">
+            <a href="/" class="logo-brand">
+                <img src="/Untitled design (14).png" alt="Next Frontier Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-main">Next Frontier</span>
+                    <span class="brand-sub">Financial Services</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/bookkeeping/">Bookkeeping</a>
+                <a href="/Tax-Services/">Tax Services</a>
+                <a href="/blog/">Blog</a>
+                <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="nav-btn">Secure Your Consultation</a>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Split Hero Section (Sand Light) -->
-    <section class="hero-split">
+    <section class="hero">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <p class="eyebrow" style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; color: var(--sage-dark); margin-bottom: 1.2rem; text-transform: uppercase;">
-                        Bookkeeping • Tax Preparation • Tax Planning
-                    </p>
-                    <h1>Clean Books.<br>Clear Taxes.<br>Confident Growth.</h1>
-                    <p>You didn’t start your business to manage spreadsheets or worry about tax deadlines. We handle your bookkeeping, tax preparation, and year-round planning so you always know exactly where your business stands—and what to do next.</p>
-                    <div class="hero-buttons">
-                        <a href="#onboarding-frontier" class="btn-primary">Schedule your free Strategy Call</a>
-                        <a href="#focus-selection" class="btn-secondary">Explore Our Services</a>
-                    </div>
-                </div>
-                <div class="hero-showcase">
-                    <h3>Our Commitments</h3>
-                    <ul class="trust-list">
-                        <li><span>✓</span> Monthly Bookkeeping Packages</li>
-                        <li><span>✓</span> Tax Preparation and Planning</li>
-                        <li><span>✓</span> Secure Cloud Accounting</li>
-                        <li><span>✓</span> Personalized Support</li>
-                    </ul>
-                </div>
-            </div>
+            <h1>Financial Mastery for Your Business Frontier</h1>
+            <p>Pristine bookkeeping and intentional tax execution designed to clear your path, protect your cash flow, and give you the space to build.</p>
+            <a href="#focus-selection" class="btn-primary">Explore Our Services</a>
         </div>
     </section>
 
-    <!-- Workflow Section (Charcoal Overlay Background) -->
     <section class="section-padding process-section">
         <div class="container">
             <div class="section-header">
-                <span>How It Works</span>
-                <h2>Simple Financial Support For Your Business</h2>
+                <span>The Client Experience</span>
+                <h2>A Seamless Way to Oversee Your Wealth</h2>
             </div>
+            
             <div class="process-grid">
                 <div class="process-card">
                     <div class="process-icon">1</div>
-                    <h3>Book your Consultation</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">We'll learn about your business, your goals, and your current bookkeeping or tax challenges.</p>
+                    <h3>Elegant Integration</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">We safely link your transaction streams directly into a clean bookkeeping ecosystem. No tedious paperwork uploads, no friction.</p>
                 </div>
+
                 <div class="process-card">
                     <div class="process-icon">2</div>
-                    <h3>We organize your Finances</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">We keep your books accurate, organized, and tax-ready throughout the year so you always know where your business stands.</p>
+                    <h3>Meticulous Oversight</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Every transaction is expertly categorized, balanced, and verified each month. You receive accurate financial tracking that you can actually use.</p>
                 </div>
+
                 <div class="process-card">
                     <div class="process-icon">3</div>
-                    <h3>Grow with Confidence</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">With reliable financial reports and proactive tax planning, you can make better business decisions while we handle the numbers.</p>
+                    <h3>Strategic Execution</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">We map out your year-end tax liabilities long before deadlines arrive, adjusting your positioning to maximize returns and lower stress.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Editorial Identity Component (White Background) -->
     <section class="section-padding about-section">
         <div class="container">
             <div class="about-grid">
+                
                 <div class="about-image-container">
                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Next Frontier Financial Services Corporate Workspace" class="about-image">
                 </div>
+
                 <div class="about-content">
-                    <span>Your Financial Partner</span>
-                    <h3>Built for Business Owners Who Want to Stay Ahead of Taxes, Not Chase Them</h3>
-                    <p>Most business owners don’t struggle because they’re unorganized—they struggle because they don’t have clear financial visibility. We fix that by keeping your books clean, your taxes planned, and your financial decisions informed.</p>
-                    <p>We believe great financial management is about more than staying compliant—it's about giving you the confidence to make informed decisions. Whether you're catching up on your books, preparing for tax season, or looking for ongoing monthly support, we're here to help you stay ahead every step of the way.</p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">✓ Accurate Monthly Bookkeeping</div>
-                        <div class="highlight-item">✓ Proactive Tax Planning</div>
-                        <div class="highlight-item">✓ Secure Cloud-Based Systems</div>
-                        <div class="highlight-item">✓ Personalized Support</div>
-                    </div>
+                    <span>Behind The Firm</span>
+                    <h3>Grounded Expertise, Built For Small Business</h3>
+                    <p>At Next Frontier Financial Services, we believe that true business growth requires absolute financial clarity. We don't just categorize expenses or plug numbers into basic software. We build clean, reliable internal financial models that give you complete oversight of your operational overhead.</p>
+                    <p>Our approach mixes meticulous attention to detail with proactive tax execution. We work hard to eliminate the friction and late-night stress that usually comes with bookkeeping and accounting. By acting as a steady, focused backend team, we help keep your finances predictable so you can comfortably scale your operations.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Navigational Focus Grid (Sand Light Background) -->
     <section id="focus-selection" class="section-padding" style="background-color: var(--sand-light); border-top: 1px solid rgba(74, 93, 78, 0.1);">
         <div class="container">
+            
             <div class="section-header">
-                <span>Our Services</span>
-                <h2>Choose the Support That's Right for You</h2>
+                <span>Select Your Focus</span>
+                <h2>Tailored Financial Management</h2>
             </div>
+
             <div class="focus-grid">
+                
                 <div class="focus-card">
                     <div>
                         <h3>Bookkeeping Services</h3>
-                        <p>Monthly bookkeeping that keeps your financials accurate, organized, and ready for tax season—without last-minute stress.</p>
+                        <p>Keep your fingers on the pulse of your operational cash flow. Our monthly bookkeeping solutions offer clean ledgers, comprehensive financial balancing, and organized balance sheets tailored to sole proprietors, LLCs, and established corporations.</p>
                     </div>
-                    <a href="/bookkeeping/" class="btn-focus">See Bookkeeping Solutions</a>
+                    <a href="/bookkeeping/" class="btn-focus">Explore Bookkeeping Services</a>
                 </div>
+
                 <div class="focus-card">
                     <div>
                         <h3>Tax Strategy & Compliance</h3>
-                        <p>Whether you need individual or business tax preparation, we'll help you stay compliant while identifying opportunities to legally reduce your tax burden.</p>
+                        <p>Protect your hard-earned revenue with proactive compliance checking. From individual Form 1040 optimization to complex corporate S-Corp and C-Corp tax filings, we handle your structural execution smoothly and transparently.</p>
                     </div>
-                    <a href="/Tax-Services/" class="btn-focus">Learn about Tax Services</a>
+                    <a href="/Tax-Services/" class="btn-focus">Explore Tax Strategy</a>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="section-padding why-choose-us-section">
-        <div class="container">
-            <div class="section-header">
-                <span>Why Businesses Choose Us</span>
-                <h2>More Than Bookkeeping—A Financial Partner You Can Count On</h2>
+    <section class="portability-banner">
+        <div class="container portability-content">
+            <h2>Your Data, Always Yours</h2>
+            <p style="color: rgba(255,255,255,0.85); max-width: 650px; margin: 0 auto; font-size: 1.05rem;">
+                Unlike mass-market financial platforms that lock your transaction records inside rigid, closed networks, we host your balance sheets within universally open financial ecosystems. If your business evolves or expands, your entire history moves cleanly alongside you—no complications, no data lock-in.
+            </p>
+
+            <div class="editorial-quote">
+                blockquote>
+                    "I don't believe in trapping my clients with proprietary software locks. We build your bookkeeping structure inside premium, industry-standard ecosystems that you own. My goal is to earn your business every month through excellent service, not by holding your data hostage."
+                </blockquote>
+                <cite>— Katrina Longan, Founder</cite>
             </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
             
-            <div class="focus-grid">
-                <div class="focus-card">
-                    <h3>Personalized Service</h3>
-                    <p>You're never just another client number. We take the time to understand your business, answer your questions, and provide strategic advice that's closely tailored to your exact goals.</p>
-                </div>
-                
-                <div class="focus-card">
-                    <h3>Proactive Guidance</h3>
-                    <p>We don't just record transactions. We help you stay far ahead of tax deadlines, confidently understand your financial reports, and identify clear opportunities to improve ongoing profitability.</p>
-                </div>
-                
-                <div class="focus-card">
-                    <h3>Modern & Reliable</h3>
-                    <p>Clean, cloud-based records lead to better decisions. Every month your financial tracking is securely managed and reviewed carefully so you always know exactly where your business stands.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Target Stage Section (Light Sage Background Mutation - Highly Balanced) -->
-    <section class="section-padding who-we-serve-section">
-        <div class="container">
-            <div class="section-header">
-                <span style="color: var(--sage-dark);">Who We Serve</span>
-                <h2>Supporting Businesses Across Every Stage of Growth</h2>
-            </div>
-            <div class="support-grid">
-                <div class="support-card">
-                    <div class="support-card-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"/></svg>
-                    </div>
-                    <h3>Startups</h3>
-                    <p>Build a strong financial foundation from day one with organized bookkeeping and proactive tax planning.</p>
-                </div>
-                <div class="support-card">
-                    <div class="support-card-icon">
-                        <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
-                    </div>
-                    <h3>Growing Businesses</h3>
-                    <p>Gain reliable financial reporting and guidance that helps you make informed decisions as your business expands.</p>
-                </div>
-                <div class="support-card">
-                    <div class="support-card-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
-                    </div>
-                    <h3>Established Companies</h3>
-                    <p>Maintain accurate financial records, stay compliant, and receive strategic support throughout the year.</p>
-                </div>
-                <div class="support-card">
-                    <div class="support-card-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
-                    </div>
-                    <h3>Professional Firms</h3>
-                    <p>Whether you're a consultant, contractor, healthcare provider, or agency, we help simplify your financial operations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Strategy Resource Log (Sand Light Background Mutation) -->
-    <section class="section-padding insights-section">
-        <div class="container">
             <div class="section-header">
                 <span>Resources & Strategy</span>
-                <h2>Tax & Cash Flow Strategies for Business Owners</h2>
+                <h2>Latest From The Frontier</h2>
             </div>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+                
                 <article style="display: flex; flex-direction: column; text-align: left;">
                     <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sage-dark); font-weight: 600; margin-bottom: 0.5rem;">Tax Strategy</div>
                     <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.3;">
@@ -1006,91 +720,25 @@
                     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; flex-grow: 1;">We unpack the simple financial benchmarks, real salary expectations, and tax changes that show when your business is ready to convert...</p>
                     <a href="/posts/is-scorp-right-for-you/" style="font-size: 0.9rem; font-weight: 600; color: var(--charcoal); text-decoration: none;">Read Strategy →</a>
                 </article>
+
             </div>
+
             <div style="text-align: center;">
                 <a href="/blog/" style="display: inline-block; background-color: var(--charcoal); color: var(--white); text-decoration: none; padding: 0.8rem 2rem; font-weight: 500; border-radius: 4px; font-size: 0.95rem; transition: background-color 0.2s ease;">Explore All Insights</a>
             </div>
+
         </div>
     </section>
 
-    <!-- Frequently Asked Questions Section (Sand Light) -->
-    <section class="section-padding faq-section">
-        <div class="container faq-container">
-            <div class="section-header">
-                <span>Frequently Asked Questions</span>
-                <h2>Answers Before You Schedule</h2>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-trigger">
-                    <span>What types of businesses do you work with?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-content">
-                    <p>We work with small businesses across a wide range of industries, including service businesses, contractors, consultants, real estate professionals, e-commerce businesses, and growing companies that need reliable bookkeeping and tax support.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-trigger">
-                    <span>Do I have to be local?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-content">
-                    <p>No. We work with businesses remotely using secure cloud-based accounting tools, allowing us to serve clients wherever they operate.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-trigger">
-                    <span>Can you clean up my bookkeeping if I'm behind?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-content">
-                    <p>Absolutely. Whether you're a few months behind or several years behind, we can organize your financial records and get your books current so you're ready for tax filing and better financial decision making.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-trigger">
-                    <span>Do you provide tax planning or only tax preparation?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-content">
-                    <p>We provide both. Preparing your return is only part of the process. We also help identify tax-saving opportunities throughout the year so there are fewer surprises when filing season arrives.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-trigger">
-                    <span>What accounting software do you use?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-content">
-                    <p>We primarily work with modern cloud-based accounting platforms that allow secure collaboration, organized financial records, and easy access to your business information whenever you need it.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-trigger">
-                    <span>How do I get started?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-content">
-                    <p>Simply schedule a free consultation. We'll learn about your business, answer your questions, and recommend the bookkeeping or tax services that best fit your needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Native Cal.com Intake Frame (Light Sage Green Base) -->
     <section id="onboarding-frontier" class="booking-section">
         <div class="booking-container">
+            
             <div class="booking-intro">
                 <span class="booking-tag">Secure Your Window</span>
-                <h2>Schedule Your Consultation</h2>
-                <p>Book a strategy session to understand your current financial position, identify gaps, and get clarity on your next steps.</p>
+                <h2>Schedule Your Strategy Session</h2>
+                <p>Pick a time below to map out your numbers. No stress, no judgment—just absolute clarity on your next financial frontier.</p>
             </div>
+
             <div class="scheduler-frame-wrapper">
                 <iframe 
                     src="https://cal.com/next-frontier-financial-1kowee/30min?embed=true" 
@@ -1099,48 +747,22 @@
                     title="Secure Intake Scheduler Interface">
                 </iframe>
             </div>
+
         </div>
     </section>
-
-    <!-- Bottom Banner (Charcoal) -->
     <section class="cta-banner">
         <div class="container">
-            <h2>Let’s Bring Structure to Your Financials</h2>
-            <a href="#onboarding-frontier" class="btn-banner-action">Book Here</a>
+            <h2>Ready to experience absolute financial clarity?</h2>
+            <a href="#onboarding-frontier" class="btn-secondary">Request an Initial Consultation</a>
         </div>
     </section>
 
-    <!-- Footer (Sand Light) -->
     <footer>
         <div class="container footer-wrapper">
             <p>&copy; 2026 Next Frontier Financial Services. All rights reserved.</p>
-            <p>Info@nextfrontierfinancialservices.com</p>
-            <div class="footer-links">
-                <a href="/privacy-policy/">Privacy Policy</a>
-                <a href="/terms/">Terms</a>
-                <a href="/disclaimer/">Disclaimer</a>
-            </div>
+            <p>Meticulous Ledger Management & Strategic Tax Planning</p>
         </div>
     </footer>
-
-    <!-- Interactive Accordion Engine -->
-    <script>
-        document.querySelectorAll('.faq-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                const item = trigger.parentElement;
-                
-                // Toggle active state for current item
-                item.classList.toggle('is-active');
-                
-                // Close other items if one is opened
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('is-active');
-                    }
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>
