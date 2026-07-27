@@ -4,19 +4,15 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
   });
 
-  // 1. Update this to match where your CSS file is located
-  // Since you said your CSS file is in the 'src' folder:
- eleventyConfig.addPassthroughCopy("src/tooplate-inner-peace.css");
-  
-  // Keep your images pass-through
-  eleventyConfig.addPassthroughCopy("images");
+  // Pass through your image folders straight to the finished site
+eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("src/css");
 
   return {
     dir: {
       input: "src",
       output: "public",
-      // 2. Added the missing comma here!
-      includes: "_includes"
+   includes: "_includes"
     }
   };
 };
