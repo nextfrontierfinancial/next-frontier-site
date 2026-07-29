@@ -26,11 +26,11 @@ h1.site-page-heading.site-page-heading--light {
 .logo-brand,
 .site-brand-link {
   display: inline-flex !important;
-  flex-direction: row !important;
+  flex-direction: column !important;
   align-items: center !important;
-  gap: 0.85rem !important;
+  gap: 0 !important;
   color: var(--site-charcoal);
-  text-align: left !important;
+  text-align: center !important;
   text-decoration: none;
 }
 
@@ -44,11 +44,17 @@ h1.site-page-heading.site-page-heading--light {
   object-fit: contain;
 }
 
+.logo-img,
+.site-logo {
+  margin: 0;
+}
+
 .logo-text,
 .site-brand-copy {
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-start !important;
+  align-items: center !important;
+  margin-top: -0.2rem;
 }
 
 .brand-main,
