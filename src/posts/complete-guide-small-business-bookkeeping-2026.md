@@ -14,7 +14,7 @@ Whether you are an established service provider scaling your operations or a fre
 
 ---
 
-### Phase 1: Separate Your Finances Immediately
+## Phase 1: Separate Your Finances Immediately
 
 If you take only one piece of advice from this entire guide, let it be this: **never mix business and personal expenses.**
 
@@ -29,7 +29,7 @@ When tax season arrives, having a clean, dedicated bank feed means your financia
 
 ---
 
-### Phase 2: Choose Your Financial Tech Stack
+## Phase 2: Choose Your Financial Tech Stack
 
 Gone are the days of entering line items into a massive, clunky spreadsheet. Modern bookkeeping is automated, cloud-based, and seamless. Your tech stack should act as a background utility that works while you sleep.
 
@@ -42,42 +42,42 @@ Automation reduces human error. It changes bookkeeping from a massive historical
 
 ---
 
-### Phase 3: The Essential Bookkeeping Checklist
+## Phase 3: The Essential Bookkeeping Checklist
 
 Bookkeeping isn't an annual event. It's a rhythm. To keep your cash flow predictable and smooth, break your tasks down into manageable cycles.
 
-#### The Weekly Routine
+### The Weekly Routine
 * **Capture and Match Receipts:** Scan paper receipts immediately using your phone and match them to your digital bank feed.
 * **Review Unpaid Invoices:** Send gentle automated reminders to clients with outstanding balances to protect your liquidity.
 
-#### The Monthly Routine
+### The Monthly Routine
 * **Bank Reconciliation:** Match your accounting software balances against your actual bank statements down to the penny.
 * **Review the Big Three Reports:** Look at your Profit & Loss Statement (P&L), Balance Sheet, and Cash Flow Statement to analyze where your money went.
 
-#### The Quarterly Routine
+### The Quarterly Routine
 * **Estimate Your Taxes:** Don't let quarterly tax deadlines catch you off guard. Set aside a percentage of your revenue into your business savings account every single month to cover these comfortably.
 * **Assess Budget Variance:** Compare your actual spending against your projected goals for the quarter.
 
 ---
 
-### Phase 4: Top 2026 Bookkeeping Pitfalls to Avoid
+## Phase 4: Top 2026 Bookkeeping Pitfalls to Avoid
 
 Even well-meaning business owners fall into common financial traps. Watch out for these three major mistakes:
 
-#### 1. Misclassifying Workers
+### 1. Misclassifying Workers
 With independent contractor rules under continuous scrutiny, confusing a 1099 contractor with a W-2 employee can result in severe payroll tax penalties.
 
-#### 2. Forgetting the Home Office Deductions
+### 2. Forgetting the Home Office Deductions
 If you run operations or manage your firm from a dedicated space in your residence, make sure you are accurately calculating square footage utilities to maximize this massive deduction safely.
 
-#### 3. Ignoring Your Books Until December
+### 3. Ignoring Your Books Until December
 Waiting until the end of the year to look at your financial data means you miss out on proactive tax strategies that have to be executed *before* the ball drops on New Year's Eve.
 
 ![A smiling small business owner checking clear financials on a tablet device](/images/2026GuidetoBookkeeping.png)
 
 ---
 
-### The Ultimate Goal: Financial Freedom
+## The Ultimate Goal: Financial Freedom
 
 Bookkeeping shouldn’t feel like a punishment. At its core, it is simply the process of telling your money exactly where to go, instead of wondering where it went. 
 
