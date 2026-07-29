@@ -12,7 +12,7 @@ Nobody launches a business because they are dying to categorize receipts or reco
 
 Because of that, bookkeeping ends up at the very bottom of the priority list. It is quiet. It doesn't scream for your attention like a demanding client or an urgent email. So, you push it off. First for a week, then a month, and suddenly, you are staring down tax season with a shoebox full of paper and a sinking feeling in your stomach. 
 
-### The Real Cost of Procrastination
+## The Real Cost of Procrastination
 
 Neglecting your books isn’t just an organization problem. It’s a growth problem. 
 
@@ -20,7 +20,7 @@ When you don’t have a clear handle on your daily cash flow, you are flying com
 
 ![An entrepreneur analyzing business metrics on a clean dashboard layout](/images/Bookkeeping.png)
 
-### Driving Without a Dashboard
+## Driving Without a Dashboard
 
 Think of your bookkeeping as the dashboard of your car. 
 
@@ -28,7 +28,7 @@ Would you drive down a highway at 70 miles per hour with a taped-over speedomete
 
 When your financials are a mystery, making big strategic decisions becomes terrifying. Can you afford to hire that next team member? Is it safe to invest in that new marketing campaign? Clean books turn those anxious guesses into confident, data-backed strategic moves. 
 
-### Breaking the Cycle
+## Breaking the Cycle
 
 If you’ve fallen behind, the absolute worst thing you can do is beat yourself up and continue ignoring it. The fix doesn't require you to become a math genius overnight. It just takes a system. 
 

@@ -560,33 +560,17 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/css/site-system.css">
 </head>
 <body>
 
-    <header>
-        <div class="container nav-wrapper">
-            <a href="/" class="logo-brand">
-                <img src="/Untitled design (14).png" alt="Next Frontier Logo" class="logo-img">
-                <div class="logo-text">
-                    <span class="brand-main">Next Frontier</span>
-                    <span class="brand-sub">Financial Services</span>
-                </div>
-            </a>
-            <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="/bookkeeping/">Bookkeeping</a>
-                <a href="/Tax-Services/">Tax Services</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="nav-btn">Secure Your Consultation</a>
-            </nav>
-        </div>
-    </header>
+    {% include "components/site-header.html" %}
 
     <section class="hero">
         <div class="container">
-            <h1>Financial Mastery for Your Business Frontier</h1>
+            <h1 class="site-page-heading">Financial Mastery for Your Business Frontier</h1>
             <p>Pristine bookkeeping and intentional tax execution designed to clear your path, protect your cash flow, and give you the space to build.</p>
-            <a href="#focus-selection" class="btn-primary">Explore Our Services</a>
+            <a href="#focus-selection" class="btn-primary" aria-label="Explore Our Services at Next Frontier Financial">Explore Our Services</a>
         </div>
     </section>
 
@@ -653,7 +637,7 @@
                         <h3>Bookkeeping Services</h3>
                         <p>Keep your fingers on the pulse of your operational cash flow. Our monthly bookkeeping solutions offer clean ledgers, comprehensive financial balancing, and organized balance sheets tailored to sole proprietors, LLCs, and established corporations.</p>
                     </div>
-                    <a href="/bookkeeping/" class="btn-focus">Explore Bookkeeping Services</a>
+                    <a href="/bookkeeping/" class="btn-focus" aria-label="Explore Bookkeeping Services">Explore Bookkeeping Services</a>
                 </div>
 
                 <div class="focus-card">
@@ -661,7 +645,7 @@
                         <h3>Tax Strategy & Compliance</h3>
                         <p>Protect your hard-earned revenue with proactive compliance checking. From individual Form 1040 optimization to complex corporate S-Corp and C-Corp tax filings, we handle your structural execution smoothly and transparently.</p>
                     </div>
-                    <a href="/Tax-Services/" class="btn-focus">Explore Tax Strategy</a>
+                    <a href="/Tax-Services/" class="btn-focus" aria-label="Explore Tax Strategy and compliance services">Explore Tax Strategy</a>
                 </div>
 
             </div>
@@ -724,7 +708,7 @@
             </div>
 
             <div style="text-align: center;">
-                <a href="/blog/" style="display: inline-block; background-color: var(--charcoal); color: var(--white); text-decoration: none; padding: 0.8rem 2rem; font-weight: 500; border-radius: 4px; font-size: 0.95rem; transition: background-color 0.2s ease;">Explore All Insights</a>
+                <a href="/blog/" aria-label="Explore All Insights from Next Frontier Financial" style="display: inline-block; background-color: var(--charcoal); color: var(--white); text-decoration: none; padding: 0.8rem 2rem; font-weight: 500; border-radius: 4px; font-size: 0.95rem; transition: background-color 0.2s ease;">Explore All Insights</a>
             </div>
 
         </div>
@@ -753,7 +737,7 @@
     <section class="cta-banner">
         <div class="container">
             <h2>Ready to experience absolute financial clarity?</h2>
-            <a href="#onboarding-frontier" class="btn-secondary">Request an Initial Consultation</a>
+            <a href="#onboarding-frontier" class="btn-secondary" aria-label="Request an Initial Consultation with Next Frontier Financial">Request an Initial Consultation</a>
         </div>
     </section>
 

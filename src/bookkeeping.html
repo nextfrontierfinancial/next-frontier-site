@@ -512,36 +512,18 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/css/site-system.css">
 </head>
 <body>
 
-   <header>
-    <div class="container nav-wrapper">
-        <a href="/" class="logo-brand">
-            <!-- Fixed: Using absolute path to ensure image loads on every page -->
-            <img src="https://nextfrontierfinancialservices.com/NFLOGO.png" alt="Next Frontier Logo" class="logo-img">
-            <div class="logo-text">
-                <span class="brand-main">Next Frontier</span>
-                <span class="brand-sub">Financial Services</span>
-            </div>
-        </a>
-        <nav class="nav-links">
-            <a href="/">Home</a>
-            <a href="/bookkeeping/">Bookkeeping</a>
-            <a href="/tax-services/">Tax Services</a>
-            <a href="/tax-school.html">Tax School</a>
-            <a href="/blog/">Blog</a>
-            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="nav-btn">Secure Your Consultation</a>
-        </nav>
-    </div>
-</header>
+   {% include "components/site-header.html" %}
 
     <!-- 1. HERO SECTION -->
     <section class="page-hero">
         <div class="container">
-            <h1>Bookkeeping That Gives You Confidence in Your Numbers</h1>
+            <h1 class="site-page-heading site-page-heading--light">Bookkeeping That Gives You Confidence in Your Numbers</h1>
             <p>Stop wondering whether your books are accurate. We keep your finances organized, your reports up to date, and your business ready for tax season—all year long.</p>
-            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="cta-btn-primary">Schedule Your Free Consultation</a>
+            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" rel="noopener noreferrer" class="cta-btn-primary" aria-label="Schedule Your Free Consultation for bookkeeping services">Schedule Your Free Consultation</a>
         </div>
     </section>
 
@@ -757,7 +739,7 @@
         <div class="container">
             <h2>Ready to stop worrying about your bookkeeping?</h2>
             <p>Let us manage the numbers so you can put 100% of your energy back into scaling your company operations.</p>
-            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="cta-btn-primary">Schedule Your Consultation</a>
+            <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" rel="noopener noreferrer" class="cta-btn-primary" aria-label="Schedule Your Consultation for bookkeeping services">Schedule Your Consultation</a>
         </div>
     </section>
 

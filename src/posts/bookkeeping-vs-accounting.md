@@ -12,7 +12,7 @@ They use them interchangeably, assuming anyone who works with numbers does the s
 
 But while they are closely related, bookkeeping and accounting serve two entirely different functions. Knowing the distinction is crucial because hiring for the wrong role—or expecting one person to handle both without the right expertise—can stall your business growth.
 
-### Bookkeeping: Managing the Daily Foundation
+## Bookkeeping: Managing the Daily Foundation
 
 Think of bookkeepers as the structural engineers of your daily financial foundation. They are on the ground every day making sure the data entering your system is flawless.
 
@@ -26,7 +26,7 @@ Without a bookkeeper, your financial records quickly turn into chaos. They make 
 
 ![A concept graphic illustrating financial organization and data analysis paths](/images/Financialstrategy.png)
 
-### Accounting: Navigating the Strategic Big Picture
+## Accounting: Navigating the Strategic Big Picture
 
 If bookkeeping is about recording the numbers, accounting is about **analyzing** them. An accountant takes the clean records provided by the bookkeeper and turns them into a high-level strategic roadmap.
 
@@ -36,7 +36,7 @@ Accounting is highly analytical and strategic. Your accountant focuses on:
 * Analyzing historical data to forecast future business growth trends.
 * Ensuring full compliance with changing state and federal tax codes.
 
-### Why You Need Both to Scale
+## Why You Need Both to Scale
 
 Look at it this way: a bookkeeper makes sure your rearview mirror and dashboard indicators are crystal clear, while an accountant looks out the front windshield to map out the safest, fastest route to your destination. 
 

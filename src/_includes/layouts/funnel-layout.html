@@ -59,12 +59,15 @@
       margin-bottom: 1.5rem;
     }
   </style>
+  <link rel="stylesheet" href="/css/site-system.css">
 </head>
 <body>
 
+  {% include "components/site-header.html" %}
+
   <main>
     <article>
-      <h1>{{ title }}</h1>
+      <h1 class="site-page-heading">{{ title }}</h1>
       
       <div class="blog-content">
         {{ content | raw }}

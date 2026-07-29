@@ -208,7 +208,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(35, 43, 43, 0.55);
+            background-color: rgba(35, 43, 43, 0.78);
             z-index: -1;
         }
 
@@ -329,8 +329,8 @@
         }
 
         .pricing-card.featured .pricing-btn {
-            background-color: var(--sage);
-            border-color: var(--sage);
+            background-color: var(--sage-dark);
+            border-color: var(--sage-dark);
             color: var(--white);
         }
 
@@ -422,7 +422,7 @@
 
         .btn-secondary {
             display: inline-block;
-            background-color: var(--sage);
+            background-color: var(--sage-dark);
             color: var(--white);
             text-decoration: none;
             padding: 1rem 2rem;
@@ -496,33 +496,16 @@
             .pricing-section { background-attachment: scroll; }
         }
     </style>
+    <link rel="stylesheet" href="/css/site-system.css">
 </head>
 <body>
 
-    <!-- Unified Header Navigation -->
-   <header>
-        <div class="container nav-wrapper">
-            <a href="/" class="logo-brand">
-                <img src="/NFLOGO.png" alt="Next Frontier Logo" class="logo-img">
-                <div class="logo-text">
-                    <span class="brand-main">Next Frontier</span>
-                    <span class="brand-sub">Financial Services</span>
-                </div>
-            </a>
-            <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="/bookkeeping/">Bookkeeping</a>
-                <a href="/Tax-Services/">Tax Services</a>
-                <a href="/blog/">Blog</a>
-                <a href="https://www.calendly.com/nextfrontierfinancial" target="_blank" class="nav-btn">Secure Your Consultation</a>
-            </nav>
-        </div>
-    </header>
+    {% include "components/site-header.html" %}
 
     <!-- Main Hero Body Content -->
     <section class="page-hero">
         <div class="container">
-            <h1>Strategic Tax Solutions</h1>
+            <h1 class="site-page-heading">Strategic Tax Solutions</h1>
             <p>Proactive mapping frameworks designed to safeguard assets and effortlessly maximize entity deductions.</p>
         </div>
     </section>
@@ -565,7 +548,7 @@
                         <li>Itemized Deductions Optimization</li>
                         <li>Electronic Filing & Direct Deposit Setup</li>
                     </ul>
-                    <a href="index.html#contact" class="pricing-btn">File Personal Return</a>
+                    <a href="index.html#contact" class="pricing-btn" aria-label="File Personal Return with Next Frontier Financial">File Personal Return</a>
                 </div>
 
                 <!-- S-Corp (Featured) -->
@@ -579,7 +562,7 @@
                         <li>Shareholder Compensation Alignment</li>
                         <li>State & Federal Nexus Compliance</li>
                     </ul>
-                    <a href="index.html#contact" class="pricing-btn">File S-Corp Return</a>
+                    <a href="index.html#contact" class="pricing-btn" aria-label="File S-Corp Return with Next Frontier Financial">File S-Corp Return</a>
                 </div>
 
                 <!-- Corporate -->
@@ -592,7 +575,7 @@
                         <li>Detailed Capital Balance Sheet Match</li>
                         <li>Quarterly Estimated Liability Blueprint</li>
                     </ul>
-                    <a href="index.html#contact" class="pricing-btn">File Corporate Return</a>
+                    <a href="index.html#contact" class="pricing-btn" aria-label="File Corporate Return with Next Frontier Financial">File Corporate Return</a>
                 </div>
             </div>
         </div>
@@ -637,7 +620,7 @@
     <section class="cta-banner">
         <div class="container">
             <h2>Ready to plan your next tax frontier?</h2>
-            <a href="mailto:info@nextfrontierfinancialservices.com" class="btn-secondary">Protect Your Revenue</a>
+            <a href="mailto:info@nextfrontierfinancialservices.com" class="btn-secondary" aria-label="Protect Your Revenue with strategic tax planning">Protect Your Revenue</a>
         </div>
     </section>
 
