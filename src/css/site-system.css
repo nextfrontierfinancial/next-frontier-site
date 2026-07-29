@@ -146,6 +146,45 @@ h1.site-page-heading.site-page-heading--light {
   color: #ffffff;
 }
 
+.masterclass-banner {
+  margin: 0.65rem 0 -0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--site-charcoal);
+  color: #ffffff;
+  padding: 0.72rem 2rem;
+  text-align: center;
+}
+
+.masterclass-banner p {
+  margin: 0;
+  font-family: var(--site-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  line-height: 1.5;
+}
+
+.masterclass-banner a {
+  display: inline-block;
+  margin-left: 0.3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.masterclass-banner a:hover,
+.masterclass-banner a:focus-visible {
+  border-color: #ffffff;
+  color: #eef4ef;
+}
+
+.masterclass-banner a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
 .profile-logo-img {
   margin: 0 auto 1rem;
 }
@@ -184,6 +223,16 @@ h1.site-page-heading.site-page-heading--light {
 
   .site-header {
     padding: 0.85rem 0;
+  }
+
+  .masterclass-banner {
+    margin-top: 0.85rem;
+    margin-bottom: -0.85rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .masterclass-banner p {
+    font-size: 0.85rem;
   }
 
   .site-header .nav-links a {
